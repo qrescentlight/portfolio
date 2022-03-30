@@ -5,37 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
     <style>
         body {
-            all: unset;
+            overflow-x: hidden;
         }
 
-        img {
-            height: 30vw;
+        #imgCont div {
+            height: 40vh;
             width: 50vw;
-            object-fit: cover;
+            font-size: 7vw;
         }
 
         #imgCont {
             display: grid;
-            grid-template-columns: 50vw 50vw;
-
+            width: 100vw;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
         }
 
+        #landing {
+            width: 100vw;
+            height: 100vh;
+            background-color: mistyrose;
+        }
+
+        #imgCont div {
+            background: url(images/foto_jeugd.jpg);
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        #imgCont div:hover {
+            background: url(images/foto_jeugd.jpg);
+            -webkit-text-fill-color: white;
+            background-clip: none;
+        }
+
+        #imgCont div,
+        #imgCont div:hover {
+            color: red;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            float: right;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <h1 id="demo">ARTIST STATEMENT</h1>
+    <div id="landing">
+        <a href="#imgCont"><h1 id="demo">
+                ARTIST STATEMENT</h1></a>
     </div>
     <div id="imgCont">
-        <div><img src="images/jonquil.png" alt=""></div>
-        <div><img src="images/unruly_spring.png" alt=""></div>
-        <div><img src="images/begonia.png" alt=""></div>
-        <div><img src="images/candytuft.png" alt=""></div>
+        <div>111</div>
+        <div>>2222</div>
+        <div>3333</div>
+        <div>4444</div>
+        <div>5555</div>
+        <div>666</div>
     </div>
+
+
     <script>
         file = "json/statement.json"
         async function getText(file) {
