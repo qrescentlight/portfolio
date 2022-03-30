@@ -7,81 +7,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.typekit.net/izt0eqk.css">
     <style>
         body {
+            font-family: proxima-nova, sans-serif;
+            font-weight: 900;
+            font-style: normal;
             overflow-x: hidden;
         }
 
-        #imgCont div {
-            height: 40vh;
-            width: 50vw;
-            font-size: 7vw;
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            background: wheat;
         }
 
-        #imgCont {
-            display: grid;
-            width: 100vw;
-            grid-template-columns: 1fr 1fr;
-            justify-content: center;
+        #work {
+            font-size: 3vw;
+            display: block;
+            text-align: right;
+            margin-right: 50vw;
+            padding: 10vw;
+            justify-content: flex-end;
             align-items: center;
         }
 
-        #landing {
-            width: 100vw;
-            height: 100vh;
-            background-color: mistyrose;
-        }
-
-        #imgCont div {
-            background: url(images/foto_jeugd.jpg);
+        #work li {
+            background: url(images/ndo5two-01.png);
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        #imgCont div:hover {
-            background: url(images/foto_jeugd.jpg);
-            -webkit-text-fill-color: white;
-            background-clip: none;
-        }
-
-        #imgCont div,
-        #imgCont div:hover {
-            color: red;
-            background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-clip: text;
+            /* color: red; */
         }
 
-        h1 {
-            float: right;
+        #work li:hover {
+            background: url(images/ndo5two-01.png);
+            -webkit-text-fill-color: white;
+            background-repeat: no-repeat;
+            background-clip: none;
+            /* color: red; */
+        }
+
+        #landing {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
+
+        #artstat {
+            font-size: 3vw;
+            width: 75vw;
+            z-index: 1;
+        }
+
+        #picture {
+            background-color: white;
+            width: 32vw;
+            height: 32vw;
+            position: absolute;
+            margin-left: 37.5vw;
+            z-index: 0;
+        }
+
+        .spanText {
+            color: green;
+            font-style: italic;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 8vh;
+            width: 100vw;
+            position: fixed;
+            /* background: rgba(122, 122, 122, 0.24); */
+            z-index: 9;
+        }
+
+        nav li {
+            margin: 0vw 1vw;
+        }
+
+        #about {
+            background: white;
         }
     </style>
 </head>
 
 <body>
-    <div id="landing">
-        <a href="#imgCont"><h1 id="demo">
-                ARTIST STATEMENT</h1></a>
-    </div>
-    <div id="imgCont">
-        <div>111</div>
-        <div>>2222</div>
-        <div>3333</div>
-        <div>4444</div>
-        <div>5555</div>
-        <div>666</div>
-    </div>
+    <nav>
+        <li><a href="#about">over mij</a></li>
+        <li><a href="#content">mijn werk</a></li>
+        <li><a href="#contact">contact</a></li>
+    </nav>
+    <section id="landing">
+        <h1 id="artstat">Ik wil mijn <span class="spanText">vaardigheden</span> als <span class="spanText">designer</span> gebruiken
+            om anderen te helpen met hun <span class="spanText">geestelijke gezondheid</span>.</h1>
+        <div id="picture"></div>
+    </section>
+    <section id="about"></section>
+    <section id="content">
+        <ul id="work">
+            <li>Bos in Huis</li>
+            <li>Braive</li>
+            <li>Persuasion</li>
+            <li>Storytelling XR</li>
+            <li>Jonquil</li>
+            <li>UNRULY SPRING</li>
+            <li>an-ti-xiety</li>
+        </ul>
+    </section>
+    <section id="contact"></section>
 
-
-    <script>
-        file = "json/statement.json"
-        async function getText(file) {
-            let myObject = await fetch(file);
-            let myText = await myObject.json();
-            document.getElementById("demo").innerHTML = myText.name;
-        }
-        getText(file);
-    </script>
+    <script></script>
 </body>
 
 </html>
