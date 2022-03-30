@@ -14,6 +14,7 @@
             font-weight: 900;
             font-style: normal;
             overflow-x: hidden;
+
         }
 
         section {
@@ -23,7 +24,7 @@
             background: wheat;
         }
 
-        #work {
+        /* #work {
             font-size: 3vw;
             display: block;
             text-align: right;
@@ -31,20 +32,26 @@
             padding: 10vw;
             justify-content: flex-end;
             align-items: center;
-        }
+        } */
 
         #work li {
-            background: url(images/ndo5two-01.png);
+            background: url(gifs/oog.gif);
             -webkit-text-fill-color: transparent;
             background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             background-clip: text;
             /* color: red; */
         }
 
         #work li:hover {
-            background: url(images/ndo5two-01.png);
+            background: transparent;
+            background: url(gifs/oog.gif);
+            background-color: aliceblue;
             -webkit-text-fill-color: white;
             background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             background-clip: none;
             /* color: red; */
         }
@@ -54,12 +61,14 @@
             align-items: center;
             text-align: center;
             display: flex;
+            background-color: black;
+            color: white;
         }
 
         #artstat {
             position: absolute;
             font-size: 3vw;
-            width: 45vw;
+            width: 55vw;
             z-index: 1;
             text-align: end;
             /* margin: 15vh 50vw; */
@@ -68,13 +77,22 @@
         }
 
         #picture {
-            display: none;
+            /* display: none; */
             background-color: white;
             width: 30vw;
             height: 30vw;
             position: absolute;
-            margin-left: 37.5vw;
+            margin-left: 66vw;
+            margin-top: 35vh;
             z-index: 0;
+            /* }
+
+        #picture:hover{ */
+
+            background: url(images/candytuft.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
 
         .spanText {
@@ -89,8 +107,10 @@
             height: 8vh;
             width: 100vw;
             position: fixed;
-            /* background: rgba(122, 122, 122, 0.24); */
+            background: black;
+            color: white;
             z-index: 9;
+            font-size: 1vw;
         }
 
         nav li {
@@ -99,6 +119,43 @@
 
         #about {
             background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #aboutP {
+            width: 50vw;
+        }
+
+        #work {
+            display: grid;
+            grid-template-columns: 50vw 50vw;
+            margin: 0px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        #work li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-self: center;
+            align-self: center;
+            height: 40vh;
+            width: 50vw;
+            font-size: 2vw;
+            text-align: center;
+            font-size: 6vw;
+        }
+
+        #content {
+            height: auto;
+        }
+
+        #contact{
+            background: green;
         }
     </style>
 </head>
@@ -110,12 +167,14 @@
         <li><a href="#contact">contact</a></li>
     </nav>
     <section id="landing">
-        <h1 id="artstat">Ik wil mijn <span class="spanText">&#60;vaardigheden&#62;</span> als <span
-                class="spanText">&#60;designer&#62;</span> gebruiken
-            om anderen te helpen met hun <span class="spanText">&#60;geestelijke gezondheid&#62;</span>.</h1>
+        <p id="artstat">Ik wil mijn <span class="spanText">vaardigheden</span> als <span
+                class="spanText">designer</span> gebruiken
+            om anderen te helpen met hun <span class="spanText">geestelijke gezondheid</span>.</p>
         <div id="picture"></div>
     </section>
-    <section id="about"></section>
+    <section id="about">
+        <p id="aboutP">Ik ben een Groningse student</p>
+    </section>
     <section id="content">
         <ul id="work">
             <li>Bos in Huis</li>
