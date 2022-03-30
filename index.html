@@ -57,15 +57,21 @@
         }
 
         #artstat {
+            position: absolute;
             font-size: 3vw;
-            width: 75vw;
+            width: 55vw;
             z-index: 1;
+            text-align: end;
+            /* margin: 15vh 50vw; */
+            left: 5vw;
+            /* bottom: 10vw; */
         }
 
         #picture {
+            display: none;
             background-color: white;
-            width: 32vw;
-            height: 32vw;
+            width: 30vw;
+            height: 30vw;
             position: absolute;
             margin-left: 37.5vw;
             z-index: 0;
@@ -94,6 +100,13 @@
         #about {
             background: white;
         }
+        #artdiv {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            width: 70vw;
+            height: 40vh;
+        }
     </style>
 </head>
 
@@ -104,8 +117,9 @@
         <li><a href="#contact">contact</a></li>
     </nav>
     <section id="landing">
-        <h1 id="artstat">Ik wil mijn <span class="spanText">vaardigheden</span> als <span class="spanText">designer</span> gebruiken
-            om anderen te helpen met hun <span class="spanText">geestelijke gezondheid</span>.</h1>
+        <div id="artdiv"><h1 id="artstat">Ik wil mijn <span class="spanText">vaardigheden</span> als <span
+                class="spanText">designer</span> gebruiken
+            om anderen te helpen met hun <span class="spanText">geestelijke gezondheid</span>.</h1></div>
         <div id="picture"></div>
     </section>
     <section id="about"></section>
