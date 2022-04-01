@@ -14,14 +14,14 @@
             font-weight: 900;
             font-style: normal;
             overflow-x: hidden;
-
+            scroll-behavior: smooth;
         }
 
         section {
             width: 100vw;
             height: 100vh;
             display: flex;
-            background: wheat;
+            background: white;
         }
 
         /* #work {
@@ -41,9 +41,13 @@
             align-items: center;
             text-align: center;
             display: flex;
-            background: url(images/begonia.png);
-            background-position: center;
-            background-size: 300vw auto;
+            background: url(images/jonquil.png);
+            /* background-position: -10vw -70vh; */
+            background-position: -10vw center;
+            background-repeat: no-repeat;
+            background-size: 200vw auto;
+            background-attachment: fixed;
+            background-origin: content-box;
         }
 
         #artstat {
@@ -60,26 +64,27 @@
 
         #artblock {
             position: absolute;
-            width: 60vw;
-            height: 30vh;
+            width: 63vw;
+            height: 35vh;
             background-color: white;
             z-index: 1;
-            left: 10vw;
+            left: 9vw;
 
         }
 
         #picture {
-            /* display: none; */
+            display: none;
             background-color: white;
             width: 30vw;
             height: 30vw;
             position: absolute;
-            /* margin-left: 37.5vw; */
+            margin-left: 37.5vw;
             z-index: 0;
             /* }
+            
 
         #picture:hover{ */
-
+            /* display: none; */
             background: url(gifs/oog.gif);
             background-repeat: no-repeat;
             background-size: cover;
@@ -103,6 +108,8 @@
             z-index: 9;
             font-size: 1vw;
             color: white;
+            transition: 0.2s ease-in-out;
+            /* mix-blend-mode: difference; */
         }
 
         nav li {
@@ -110,10 +117,15 @@
         }
 
         #about {
-            background: wheat;
+            background: white;
             display: flex;
             justify-content: center;
             align-items: center;
+            color: black;
+            /* transition: 0.2s ease-in-out; */
+            /* transition-property: ; */
+            height: auto;
+            min-height: 100vh;
         }
 
         #aboutP {
@@ -298,21 +310,16 @@
 
 
         @keyframes artstat {
-            30% {
-                margin-top: -1vh;
-                margin-left: -0.8vh;
-            }
+
 
             50% {
-                margin-left: 0.5vh
+                margin: 0.1%;
             }
 
-            70% {
-                margin-top: 0.5vh
-            }
+
         }
 
-        @keyframes artblock {
+        /* @keyframes artblock {
             30% {
                 margin-top: 0.4vh;
                 margin-left: 1.1vh;
@@ -327,12 +334,12 @@
             70% {
                 margin-top: -0.9vh
             }
-        }
+        } */
 
-        #artstat {
+        /* #artstat {
             /* animation: artstat 1s ease-in-out; */
-            animation: ;
-        }
+        /* animation: ; */
+        /* } */
 
         /* #picture{
             animation: picture 1s ease-in-out;
@@ -344,6 +351,82 @@
                 margin-left:-0.3vw
             }
         } */
+        /* 
+        nav{
+            mix-blend-mode: exclusion;
+            transition: 1s ease-in;
+        } */
+        #imgOne {
+            /* max-width: 20vw;
+max-height: 20vw; */
+            object-fit: cover;
+            width: 20vw;
+            height: 20vw;
+            /* z-index: inherit; */
+            /* mix-blend-mode:overlay; */
+            /* content: url(images/profielpic.png);
+
+        }
+
+        #imgOne:hover { */
+            content: url(images/profielsun.JPG);
+        }
+
+
+
+        /* .divImg {
+            display: flex; */
+        /* position: overlay; */
+        /* } */
+
+        nav li {
+            padding: 1vh;
+        }
+
+        #about {
+            /* padding: 1vw; */
+            /* height:300vh; */
+            display: block;
+        }
+
+        .aboutSec {
+            /* all:unset; */
+            display: block;
+            width: 100vw;
+            /* justify-content: center; */
+            /* align-items: center; */
+            font-size: 2vw;
+            /* font-family: Proxima Nova Condensed; */
+            font-weight: 500;
+            text-align: end;
+        }
+
+        /* .aboutSec p, .aboutSec div{
+            
+            position: absolute;
+        } */
+        /* #abone{ */
+        /* background-color: white; */
+        /* height: 30vh;
+            width: 60vw; */
+        /* z-index: 1; */
+
+        /* }
+        #aboutP{
+            z-index: 1;
+        } */
+        /* .aboutSec p {
+            margin-left: 30vw;
+        }
+
+        .aboutSec div {
+            margin-left: -50vw;
+        } */
+        
+        #aboutP{
+            width: 50vw;
+            background-color: aliceblue;
+        }
     </style>
 </head>
 
@@ -362,7 +445,49 @@
 
     </section>
     <section id="about">
-        <p id="aboutP">Ik ben een Groningse student</p>
+        <section class="aboutSec">
+            <!-- <div class="divImg" id="imgOne">Hai, ik ben Remco O/</div> -->
+            <p id="abone"></p>
+
+            <p id="aboutP">
+            <h1>Ik ben een plant. </h1>
+            Ik drink graag thee, ik houd er van om te haken en heb een grote liefde voor
+            speelkaarten. Ik ben ook een designer en ik wil mijn kennis en vaardigheden als ontwerper gebruiken om
+            anderen te helpen met hun geestelijke gezondheid.
+            </p>
+        </section>
+        <!-- <section class="aboutSec">
+            <div></div>
+            <p>
+                Ik heb een echte growth-mindset: voor mij is elk moment een gelegenheid om te leren en te groeien. Ik
+                ben
+                dan ook erg kritisch en reflectief, maar ik sta ook erg open voor andere meningen. Daarnaast houd ik er
+                ook
+                erg van om nieuwe dingen te leren en ben ik erg nieuwsgierig naar hoe iets in elkaar steekt. Ik kan dan
+                ook
+                snel nieuwe vaardigheden oppakken.
+            </p>
+        </section> -->
+        <!-- <section class="aboutSec">
+            <div></div>
+            <p>
+                Ik heb een hoog empathisch vermogen, wat mij op een andere manier met mensen laat communiceren. Dit zie
+                je
+                terug in de manier hoe ik omga met anderen, maar ook in het creatieve proces en mijn ontwerpen. Ik
+                probeer
+                graag op een andere manier mensen te bereiken en ik denk daarom veel out-of-the-box.
+            </p>
+        </section> -->
+        <!-- <section class="aboutSec">
+            <div></div>
+            <p>
+
+                Ik heb als designer een grote variatie aan tools die ik kan toepassen, maar mijn grootste asset is
+                programmeren. Ik ben erg vaardig in HTML, CSS & JavaScript en ik ben altijd bezig om mijzelf nog verder
+                uit
+                te dagen.
+            </p>
+        </section> -->
     </section>
     <section id="content">
         <ul id="work">
@@ -378,6 +503,56 @@
     <section id="contact"></section>
 
     <script refer>
+        window.onscroll = function () {
+            checkTop();
+        }
+        function checkTop() {
+
+
+            var about = document.getElementById("about");
+            var bounding = about.getBoundingClientRect();
+            var artblock = document.getElementById("artblock");
+            var artbound = artblock.getBoundingClientRect();
+
+            // console.log(bounding)
+            console.log(artbound);
+
+            // // werkt wel -> wil ik niet gebruiken
+            // if (bounding.top <= 0) {
+            //     document.querySelector("nav").style.color = "white"; for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
+            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
+            //     }
+            //     // about.style.backgroundColor = "white";
+            // // } else if (artbound.top >= 10 || artbound.top <= -110) {
+            // //     document.querySelector("nav").style.color = "white";
+            // //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
+            // //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
+            // //     }
+            // //     // about.style.backgroundColor = "black";
+            // } else {
+            //     document.querySelector("nav").style.color = "black";
+            //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
+            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "white";
+            //     }
+            // }
+
+            if (bounding.top >= 0) {
+                for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
+                    document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "black";
+                    document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
+                }
+                document.querySelector("nav").style.mixBlendMode = "normal"
+
+            } else {
+                for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
+                    document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
+                    document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
+
+                }
+                document.querySelector("nav").style.mixBlendMode = "difference"
+            }
+
+        }
         // artfunc();
         // const artstat = document.getElementById("artstat");
         // // const picture = document.getElementById("picture");
@@ -392,26 +567,33 @@
         // document.getElementById("artstat").style.animation = "artstat 1s ease-in-out";
 
         setTimeout(numRot, 1);
+        const spanText = document.getElementsByClassName("spanText");
 
         function numRot() {
-            document.getElementById("artstat").style.animation = "artstat 2s ease-in-out";
-            document.getElementById("artblock").style.animation = "artblock 2s ease-in-out";
-            setTimeout(numOut, 2000);
+            for (let i = 0; i < spanText.length; i++) {
+                spanText[i].style.animation = "artstat 2s ease-in-out";
+                // document.getElementById("artblock").style.animation = "artblock 2s ease-in-out";
+
+            } setTimeout(numOut, 2000);
         };
 
         function numOut() {
-            document.getElementById("artstat").style.animation = "";
-            document.getElementById("artblock").style.animation = "";
-            setTimeout(numRot, 1);
+            for (let i = 0; i < spanText.length; i++) {
+                spanText[i].style.animation = "";
+                // document.getElementById("artblock").style.animation = "";
+
+            } setTimeout(numRot, 1);
         };
 
         showCoords(event)
         function showCoords(event) {
             var x = event.clientX;
             var y = event.clientY;
-            document.getElementById("picture").style.marginLeft = x / 3 + "px";
-            document.getElementById("picture").style.marginTop = y / 3  + "px";
+            document.getElementById("artblock").style.marginLeft = 3 - x / 500 + "vw";
+            document.getElementById("artblock").style.marginTop = 5 - y / 100 + "vh";
+            // document.getElementById("artblock").style.width = 3 - x / 100 + "vw";
         }
+
 
     </script>
 </body>
