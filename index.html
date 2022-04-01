@@ -100,7 +100,11 @@
             align-items: center;
             color: black;
             height: auto;
+            display: block;
             /* min-height: 100vh; */
+            width: 100vw;
+            
+            padding-bottom: 15vh;
         }
 
         #aboutP {
@@ -109,6 +113,7 @@
 
         #work {
             display: grid;
+            /* grid-template-columns: 50vw 50vw; */
             grid-template-columns: 50vw 50vw;
             margin: 0px;
             justify-content: center;
@@ -275,27 +280,34 @@
         }
 
         #about {
-            display: flex;
+            display: block;
         }
 
         .aboutSec {
             display: block;
-            padding-top: 15vw;
+            padding-top: 15vh;
             padding-right: 15vw;
             padding-left: 15vw;
-            width: 800vw;
+            width: 80vw;
             font-size: 1.5vw;
             font-weight: 500;
             text-align: justify;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             height: auto;
+        }
+
+        #secOne {
+            display: grid;
+            grid-template-areas:
+                'title profilepic'
+                'desc profilepic'
+            ;
         }
 
         #abone {
             display: block;
             /* width: 50vw; */
             /* margin-left: -10vw; */
+            grid-area: title;
         }
 
         #aboutP {
@@ -307,11 +319,18 @@
 
         #aboutOneCont {
             /* background-color: aliceblue; */
-            width: auto;
+            width: 30vw;
             /* margin-left: 15vw; */
             padding-top: 5vw;
             padding-right: 15vw;
             padding-left: 15vw;
+            grid-area: desc;
+        }
+
+        h2 {
+            font-size: 2vw;
+            color: white;
+            font-weight: 900;
         }
 
         h1 {
@@ -319,8 +338,7 @@
             font-weight: 900;
             /* text-align: right; */
             text-align: left;
-            text-transform: lowercase;
-            font-style: italic;
+            /* text-transform: lowercase; */
             /* color: green; */
             /* margin-bottom: 1vw; */
             width: fit-content;
@@ -329,6 +347,7 @@
         }
 
         h1 span {
+            font-style: italic;
             color: green;
         }
 
@@ -336,28 +355,113 @@
             color: rgba(255, 255, 255, 0);
         }
 
-        #picOne img{
-            /* background-image: url(images/foto_jeugd.jpg);
+        #picOne {
+            grid-area: profilepic;
+            position: absolute;
+            background: url(images/profielpic.png);
             background-repeat: no-repeat;
-            background-size: 200vw; */
-            /* padding: 0vw; */
-            /* margin-left: -30vw; */
-            width:auto;
-            height:15vw;
-            /* overflow: hidden; */
-            /* object-fit: 200%; */
-            /* transition: 1s ease-out; */
+            background-size: auto 26vw;
+
+            background-position: top;
+            position: relative;
+            width: 15vw;
+            height: 2vw;
+            float: right;
+            /* margin-left: -10vw;s */
+            left: -10vw;
+            /* mix-blend-mode: color-burn; */
+            /* }
+
+        #picOne:hover { */
+            background: url(images/profielsun.JPG);
+            background-repeat: no-repeat;
+            background-size: auto 26vw;
+            background-position: top;
+            width: 15vw;
+            height: 26vw;
+            transition: 1s;
+            /* z-index: 3;
+             */
+            /* margin-left: auto */
         }
-        #picOne{
-            width:5vw;
-            height:5vw;
-            overflow: hidden;
-            transition: 1s ease-out;
+
+        /* #pictwo {
+            background: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            position: relative;
+            /* left: 15vw; */
+        /* z-index: 2;
+            width: 14vw;
+            height: 1vw; */
+        /* top: 154vh; */
+        /* top: -22vw;
+        
         }
-        #picOne:hover{
-            overflow: visible;
-            transition: 1s ease-out;
-           
+
+        #pictwo:hover{
+            background: url(images/profielsun.JPG);background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            width: 14vw;
+            height: 21.75vw;
+            transition: 1s;
+        } */
+        .padding {
+            padding-top: 5vw;
+        }
+
+        #stage h1 {
+            text-align: right;
+            float: right;
+margin-bottom: 1vw;
+        }
+
+        #watikkan {
+            width: 30vw;
+            padding-top: 4vw;
+            margin-left: -30vw;
+        }
+
+        #hulp {
+            padding-top: 4vw;
+            width: 43vw;
+            /* text-align: right; */
+            text-align: left;
+            margin-left: -30vw;
+            margin-top: -15vw;
+        }
+
+        p {
+            /* text-align: left; */
+            text-align: justify;
+        }
+
+        /* #geweldig{
+            font-size: ;
+        } */
+
+        #picthree {
+            background-image: url(images/foto_jeugd.jpg);
+            background-repeat: no-repeat;
+            background-position: 0vw 0vw;
+            background-size: 25vw auto;
+            /* margin-left: -5vw; */
+            margin-top: 4vw;
+            width: 8vw;
+            height: 8vw;
+
+        /* }
+
+        #picthree:hover {
+            background-image: url(images/foto_jeugd.jpg);
+            background-repeat: no-repeat;
+            background-size: 25vw auto; */
+            /* margin-left: -5vw; */
+            width: 25vw;
+            height: 25vw;
+
         }
     </style>
 </head>
@@ -377,58 +481,52 @@
 
     </section>
     <section id="about">
-        <section class="aboutSec">
+        <section class="aboutSec" id="secOne">
             <!-- <div class="divImg" id="imgOne">Hai, ik ben Remco O/</div> -->
 
             <div id="abone">
                 <h1>Ik ben een <span>designer</span>. </h1>
                 <h1><span class="noshow">Ik ben een</span> <span>programmeur</span>. </h1>
-                <h1><span class="noshow">Ik ben een</span> <span>idealist</span>. </h1>
+                <h1><span class="noshow">Ik ben een</span> <span>ervaringsdeskundige</span>. </h1>
                 <h1><span class="noshow">Ik ben een</span> <span>plant</span>. </h1>
             </div>
-            <div id="picOne"><img src="images/foto_jeugd.jpg" alt=""></div>
+            <div id="picOne">
+                <!-- <img src="images/foto_jeugd.jpg" alt=""> -->
+                <h2>
+                    <!-- ik ben Remco O/ -->
+                </h2>
+            </div>
             <div id="aboutOneCont">
                 <p id="aboutP">
                     Ik drink graag thee, ik houd er van om te haken en heb een grote liefde voor
-                    speelkaarten. Ik ben ook een designer en ik wil mijn kennis en vaardigheden als ontwerper gebruiken
+                    speelkaarten. Ik ben ook een designer en als ontwerper ik wil mijn kennis en vaardigheden gebruiken
                     om
                     anderen te helpen met hun geestelijke gezondheid.
                 </p>
             </div>
+            <div></div>
+            <div id="pictwo"></div>
+
+
+            <div class="padding" id="stage">
+                <h1>Ik ben op zoek naar een<span> stage</span> <br> waar ik mijn <span>missie</span> kan
+                    <span>bereiken</span>.
+                </h1>
+            </div>
+            <div></div>
+            <div id="picthree"></div>
+            <p id="watikkan">Ik weet hoe het is om mentaal door het leven te struggelen en mij had enorm veel leed
+                gespaard kunnen blijven als ik als kind de juiste hulp had gekregen. Maar toen ik eindelijk die hulp had
+                gekregen, had ik er ook ontzettend veel aan.</p>
+            <div></div>
+            <h1 id="hulp">Als ik voor een <span>ander</span> iets in <br>dat <span>proces</span> kan betekenen,<br> dan
+                zou dat best wel heel erg
+                <span id="geweldig"> geweldig</span>
+                zijn.
+            </h1>
 
         </section>
-        <!-- <section class="aboutSec">
-            <div></div>
-            <p>
-                Ik heb een echte growth-mindset: voor mij is elk moment een gelegenheid om te leren en te groeien. Ik
-                ben
-                dan ook erg kritisch en reflectief, maar ik sta ook erg open voor andere meningen. Daarnaast houd ik er
-                ook
-                erg van om nieuwe dingen te leren en ben ik erg nieuwsgierig naar hoe iets in elkaar steekt. Ik kan dan
-                ook
-                snel nieuwe vaardigheden oppakken.
-            </p>
-        </section> -->
-        <!-- <section class="aboutSec">
-            <div></div>
-            <p>
-                Ik heb een hoog empathisch vermogen, wat mij op een andere manier met mensen laat communiceren. Dit zie
-                je
-                terug in de manier hoe ik omga met anderen, maar ook in het creatieve proces en mijn ontwerpen. Ik
-                probeer
-                graag op een andere manier mensen te bereiken en ik denk daarom veel out-of-the-box.
-            </p>
-        </section> -->
-        <!-- <section class="aboutSec">
-            <div></div>
-            <p>
 
-                Ik heb als designer een grote variatie aan tools die ik kan toepassen, maar mijn grootste asset is
-                programmeren. Ik ben erg vaardig in HTML, CSS & JavaScript en ik ben altijd bezig om mijzelf nog verder
-                uit
-                te dagen.
-            </p>
-        </section> -->
     </section>
     <section id="content">
         <ul id="work">
@@ -444,7 +542,7 @@
     <section id="contact"></section>
 
     <script refer>
-        window.onscroll = function () {
+        window.onscroll = window.onload = function () {
             checkTop();
         }
         function checkTop() {
