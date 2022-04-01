@@ -103,7 +103,7 @@
             display: block;
             /* min-height: 100vh; */
             width: 100vw;
-            
+
             padding-bottom: 15vh;
         }
 
@@ -118,6 +118,7 @@
             margin: 0px;
             justify-content: center;
             align-items: center;
+            background-color: whitesmoke;
         }
 
         #work li {
@@ -355,6 +356,14 @@
             color: rgba(255, 255, 255, 0);
         }
 
+        /* .noshow:hover {
+            color: black
+        } */
+
+        .show {
+            color: black
+        }
+
         #picOne {
             grid-area: profilepic;
             position: absolute;
@@ -415,22 +424,23 @@
         #stage h1 {
             text-align: right;
             float: right;
-margin-bottom: 1vw;
+            margin-bottom: 1vw;
         }
 
         #watikkan {
             width: 30vw;
             padding-top: 4vw;
-            margin-left: -30vw;
+            margin-left: -25vw;
         }
 
         #hulp {
             padding-top: 4vw;
-            width: 43vw;
-            /* text-align: right; */
-            text-align: left;
-            margin-left: -30vw;
-            margin-top: -15vw;
+            width: 40vw;
+            text-align: right;
+            /* text-align: left; */
+            margin-left: -35vw;
+            margin-top: -10vw;
+             /* margin-top: -5vw; */
         }
 
         p {
@@ -446,21 +456,21 @@ margin-bottom: 1vw;
             background-image: url(images/foto_jeugd.jpg);
             background-repeat: no-repeat;
             background-position: 0vw 0vw;
-            background-size: 25vw auto;
+            background-size: 20vw auto;
             /* margin-left: -5vw; */
             margin-top: 4vw;
             width: 8vw;
             height: 8vw;
 
-        /* }
+            /* }
 
         #picthree:hover {
             background-image: url(images/foto_jeugd.jpg);
             background-repeat: no-repeat;
             background-size: 25vw auto; */
             /* margin-left: -5vw; */
-            width: 25vw;
-            height: 25vw;
+            width: 20vw;
+            height: 20vw;
 
         }
     </style>
@@ -485,7 +495,7 @@ margin-bottom: 1vw;
             <!-- <div class="divImg" id="imgOne">Hai, ik ben Remco O/</div> -->
 
             <div id="abone">
-                <h1>Ik ben een <span>designer</span>. </h1>
+                <h1><span class="noshow show">Ik ben een</span> <span>designer</span>. </h1>
                 <h1><span class="noshow">Ik ben een</span> <span>programmeur</span>. </h1>
                 <h1><span class="noshow">Ik ben een</span> <span>ervaringsdeskundige</span>. </h1>
                 <h1><span class="noshow">Ik ben een</span> <span>plant</span>. </h1>
@@ -519,7 +529,7 @@ margin-bottom: 1vw;
                 gespaard kunnen blijven als ik als kind de juiste hulp had gekregen. Maar toen ik eindelijk die hulp had
                 gekregen, had ik er ook ontzettend veel aan.</p>
             <div></div>
-            <h1 id="hulp">Als ik voor een <span>ander</span> iets in <br>dat <span>proces</span> kan betekenen,<br> dan
+            <h1 id="hulp">Als ik voor een <span>ander</span> iets in dat <span>proces</span> kan betekenen, dan
                 zou dat best wel heel erg
                 <span id="geweldig"> geweldig</span>
                 zijn.
