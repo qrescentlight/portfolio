@@ -539,36 +539,30 @@
             color: red;
             font-size: 2vw;
         } */
-        /* 
+/* 
         #divtit{
             width: 100vw; */
-        /* display: inline-block; */
+            /* display: inline-block; */
         /* } */
 
-        /* padding: 5vh; */
+            /* padding: 5vh; */
         /* #divtit h1{ */
-        /* width: 100vw; */
-        /* padding: 5vh; */
-        /* width: inherit; */
-        /* display: inline-block; */
-        /* display: flex; */
-        /* justify-content: center;
+            /* width: 100vw; */
+            /* padding: 5vh; */
+            /* width: inherit; */
+            /* display: inline-block; */
+            /* display: flex; */
+            /* justify-content: center;
             align-items: center;
             font-size: 1vw;
         } */
 
-        #circle {
-            /* position: absolute;
+        #mouse{
+            position: absolute;
             width: 3vw;
             height: 3vh;
-            background: red; */
-            /* mix-blend-mode: color-burn; */
-            position: absolute;
-            transform: translate(-50%, -50%);
-            height: 35px;
-            width: 35px;
-            border-radius: 50%;
-            border: 2px solid black;
+            background: red;
+            mix-blend-mode: color-burn;
         }
     </style>
 </head>
@@ -579,13 +573,13 @@
         <li><a href="#content">mijn werk</a></li>
         <li><a href="#contact">contact</a></li>
     </nav>
-    <div id="circle"></div>
+    <div id="mouse"></div>
     <div id="where">
         <!-- <h1>hi</h1> -->
     </div>
     <div id="name"><a href="#">
-            <h1>Remco</h1>
-            <h1>Pramudita</h1>
+            <h1>Remco </h1>
+            <h1> Pramudita </h1>
         </a></div>
     <section id="landing">
 
@@ -673,14 +667,6 @@
     <section id="contact"></section>
 
     <script refer>
-        document.addEventListener('mousemove', onMouseMove);
-
-        let circle = document.getElementById('circle');
-        const onMouseMove = (e) => {
-            circle.style.left = e.pageX + 'px';
-            circle.style.top = e.pageY + 'px';
-        }
-
         window.onscroll = window.onload = function () {
             checkTop();
             // nameTop();
@@ -719,10 +705,10 @@
                 work.style.background = "black";
                 work.style.borderTop = "1vh solid black";
             } else {
-                work.style.background = "whitesmoke"
-                work.style.borderTop = "1vh solid green";
+                work.style.background = "whitesmoke"    
+                work.style.borderTop = "1vh solid green"; 
             }
-            work.style.transition = "1s ease-in"
+            work.style.transition = "1s ease-in"    
 
         }
 
@@ -770,12 +756,6 @@
             document.getElementById("mouse").style.marginLeft = x + "vw";
             document.getElementById("mouse").style.marginTop = y + "vh";
         }
-
-        const onMouseMove = (e) => {
-            circle.style.left = e.pageX + 'px';
-            circle.style.top = e.pageY + 'px';
-        }
-        
 
     </script>
 </body>
