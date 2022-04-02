@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/izt0eqk.css"> -->
     <link rel="stylesheet" href="https://use.typekit.net/izt0eqk.css">
     <style>
         body {
@@ -15,6 +16,14 @@
             font-style: normal;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            cursor: default;
+                    }
+
+        p, span div {
+            font-family: ff-good-web-pro-wide, proxima-nova, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+
         }
 
         section {
@@ -36,6 +45,9 @@
             background-attachment: fixed;
             background-origin: content-box;
         }
+        /* #landing:hover{
+            cursor: url('images/monarch.png'), auto;
+        } */
 
         #artstat {
             position: absolute;
@@ -43,7 +55,7 @@
             width: 55vw;
             z-index: 1;
             text-align: end;
-            left: 5vw;
+            left: 5.5vw;
             padding: 5vw;
         }
 
@@ -93,6 +105,10 @@
             margin: 0vw 1vw;
         }
 
+        nav li:hover {
+            background-color: red;
+        }
+
         #about {
             background: whitesmoke;
             display: flex;
@@ -133,6 +149,7 @@
 
         #content {
             height: auto;
+            font-family: Proxima Nova Black, proxima-nova;
         }
 
         #contact {
@@ -345,10 +362,10 @@
             left: -10vw;
             background: url(images/profielsun.JPG);
             background-repeat: no-repeat;
-            background-size: auto 26vw;
+            background-size: auto 25.7vw;
             background-position: top;
             width: 15vw;
-            height: 26vw;
+            /* height: 26vw; */
             transition: 1s;
         }
 
@@ -359,12 +376,13 @@
         #stage h1 {
             text-align: right;
             float: right;
+            margin-top: 1vw;
             margin-bottom: 1vw;
         }
 
         #watikkan {
             width: 30vw;
-            padding-top: 4vw;
+            padding-top: 5vw;
             margin-left: -25vw;
         }
 
@@ -377,9 +395,7 @@
             display: none;
         }
 
-        p {
-            text-align: justify;
-        }
+        
 
         #name {
             display: block;
@@ -395,6 +411,117 @@
         #name h1 {
             font-size: 2vw;
             margin-top: -0.5vw;
+        }
+
+        #struggle {
+            background-color: gray;
+            margin: 5vw;
+            margin-left: 15vw;
+            /* margin-left: 20vw; */
+
+            background: url(images/foto_jeugd.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-position: 0vw -5vw; */
+
+            width: 15vw;
+            height: 11.7vw;
+            font-size: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        #struggle div {
+            display: none;
+            grid-area: 1 / 4 / span 1 / span 2;
+        }
+
+        #struggle:hover div {
+            display: flex;
+            font-weight: 900;
+            color: white;
+        }
+
+        /* #struggle:hover {
+        height: 30vw;
+
+        } */
+
+        .ikben {
+            cursor: pointer;
+        }
+
+        .ikben:hover {
+            /* text-decoration: underline; */
+            transition: 1.2s ease-out;
+            color: darkgreen;
+        }
+
+        span div {
+            /* opacity: 0; */
+            width: 0vw;
+            position: absolute;
+            margin-top: -8vh;
+            margin-left: 21vw;
+            padding: 1vh 0vw;
+
+            font-size: 1vw;
+            background-color: black;
+            color: white;
+            transition: 0.5s;
+
+            max-width: 0vw;
+            max-height: 6vw;
+            overflow: hidden;
+
+            font-style: normal;
+        }
+
+        span:hover div {
+            font-style: normal;
+            padding: 1vh 1vw;
+            /* opacity: 1; */
+            /* z-index: 5; */
+            width: auto;
+            transition: 1.2s ease-in-out;
+            max-width: 20vw;
+        }
+
+        #visdes {
+            /* grid-area: 6 / 2 / span 1 / span 1; */
+            /* margin-top: -5vw; */
+            margin: 1vw 0vw;
+            /* margin-left: -5vw; */
+            width: 50vw;
+
+            /* text-align: end; */
+        }
+
+        #buttons {
+            display: block;
+        }
+
+        #buttons button {
+            all: unset;
+            font-family: proxima-nova;
+            font-weight: 900;
+            font-size: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: green;
+            color: white;
+            width: 10vw;
+            padding: 0.7vw 1vw;
+            margin: 1vw;
+            margin-left: -10vw;
+        }
+
+        #buttons button:hover {
+            background-color: whitesmoke;
+            color: green;
+            /* transition: 1s; */
         }
     </style>
 </head>
@@ -412,9 +539,9 @@
     <section id="landing">
 
         <p id="artblock"></p>
-        <p id="artstat">Ik wil mijn <span class="spanText">vaardigheden</span> als <span
-                class="spanText">designer</span> gebruiken
-            om anderen te helpen met hun <span class="spanText">geestelijke gezondheid</span>.</p>
+        <div id="artstat">Ik wil mijn <span class="spanText">kwaliteiten</span> als <span
+                class="spanText">ontwerper</span> gebruiken
+            om anderen te helpen met hun <span class="spanText">geestelijke gezondheid</span>.</div>
         <div id="picture"></div>
 
     </section>
@@ -422,10 +549,17 @@
         <section class="aboutSec" id="secOne">
 
             <div id="abone">
-                <h1><span class="noshow show">Ik ben een</span> <span>designer</span>. </h1>
-                <h1><span class="noshow">Ik ben een</span> <span>programmeur</span>. </h1>
-                <h1><span class="noshow">Ik ben een</span> <span>ervaringsdeskundige</span>. </h1>
-                <h1><span class="noshow">Ik ben een</span> <span>plant</span>. </h1>
+                <h1><span class="noshow show">Ik ben een</span> <span class="ikben">designer<div>ik maak visuele
+                            ontwerpen</div></span>. </h1>
+                <h1><span class="noshow">Ik ben een</span> <span class="ikben">programmeur<div>verstand van html css js
+                        </div></span>. </h1>
+                <h1><span class="noshow">Ik ben een</span> <span class="ikben">ervaringsdeskundige<div>
+                            Ik weet hoe het is om mentaal door het leven te struggelen en mij had enorm veel leed
+                            gespaard kunnen blijven als ik als kind de juiste hulp had gekregen. Maar toen ik eindelijk
+                            die hulp had
+                            gekregen, had ik er ook ontzettend veel aan.</div></span>. </h1>
+                <h1><span class="noshow">Ik ben een</span> <span class="ikben">plant<div>creatief, outside the box,
+                            analytisch, moeite om te gaan doen</div></span>. </h1>
             </div>
             <div id="picOne">
                 <h2>
@@ -433,10 +567,13 @@
             </div>
             <div id="aboutOneCont">
                 <p id="aboutP">
-                    Ik drink graag thee, ik houd er van om te haken en heb een grote liefde voor
-                    speelkaarten. Ik ben ook een designer en als ontwerper ik wil mijn kennis en vaardigheden gebruiken
+                    <!-- Ik drink graag thee, ik houd er van om te haken en heb een grote liefde voor
+                    speelkaarten. Ik ben ook een designer en als designer wil ik mijn kennis en vaardigheden gebruiken
                     om
-                    anderen te helpen met hun geestelijke gezondheid.
+                    anderen te helpen met hun geestelijke gezondheid. -->
+                    Ik weet nog niet goed wie ik ben als persoon of als ontwerper, maar ik weet wel wat ik wil gaan
+                    doen. Ik wil mijn kennis, vaardigheden en ervaringen als persoon en designer gebruiken om anderen te
+                    helpen met hun geestelijke gezondheid; dat is mijn doel, mijn missie.
                 </p>
             </div>
             <div></div>
@@ -444,15 +581,28 @@
 
 
             <div class="padding" id="stage">
-                <h1>Ik ben op zoek naar een<span> stage</span> <br> waar ik mijn <span>missie</span> kan
-                    <span>bereiken</span>.
+                <h1>Ik ben op zoek naar een<span> stage</span> <br> om mijn <span>missie</span> te
+                    <span>volbrengen</span>.
                 </h1>
             </div>
             <div></div>
-            <div></div>
-            <p id="watikkan">Ik weet hoe het is om mentaal door het leven te struggelen en mij had enorm veel leed
-                gespaard kunnen blijven als ik als kind de juiste hulp had gekregen. Maar toen ik eindelijk die hulp had
-                gekregen, had ik er ook ontzettend veel aan.</p>
+            <div id="struggle">
+                <!-- <div>mijn beste vriend en ik met onze beste vrienden</div> -->
+            </div>
+            <p id="watikkan">
+                Tijdens mijn stage wil ik ontdekken op welke verschillende manieren ik mijn kwaliteiten als ontwerper
+                kan toepassen om anderen te helpen met hun geestelijke gezondheid. Ik wil mijzelf blijven uitdagen als
+                programmeur, maar ook ervaring opdoen in het maken van goede visuele ontwerpen.
+            </p>
+            <!-- <div>
+                <button></button>
+            </div> -->
+
+            <div>
+                <h1 id="visdes">Kun jij mij daarbij helpen of wil je meer over mij te weten komen?</h1>
+            </div>
+            <div id="buttons"><button>over mij</button><button>contact</button></div>
+
 
 
         </section>
