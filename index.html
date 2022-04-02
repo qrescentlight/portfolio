@@ -21,7 +21,7 @@
             width: 100vw;
             height: 100vh;
             display: flex;
-            background: white;
+            background: whitesmoke;
         }
 
         #landing {
@@ -94,7 +94,7 @@
         }
 
         #about {
-            background: white;
+            background: whitesmoke;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -118,7 +118,7 @@
             margin: 0px;
             justify-content: center;
             align-items: center;
-            background-color: whitesmoke;
+            background-color: white;
         }
 
         #work li {
@@ -277,7 +277,7 @@
         } */
 
         nav li {
-            padding: 1vh;
+            padding: 1vh 1vw;
         }
 
         #about {
@@ -354,6 +354,7 @@
 
         .noshow {
             color: rgba(255, 255, 255, 0);
+            font-style: normal;
         }
 
         /* .noshow:hover {
@@ -473,16 +474,38 @@
             height: 20vw;
 
         }
+
+        #name{
+            display: block;
+            color: white;
+            position: fixed;
+            margin: auto;
+            bottom: -0.15vw;
+            left: 0.1vw;
+            z-index: 5;
+            /* font-size: 34vw; */
+            /* justi */
+            /* align-items: baseline; */
+            mix-blend-mode: difference;
+
+        }
+
+        #name h1{
+            font-size: 2vw;
+            margin-top: -0.5vw;
+        }
     </style>
 </head>
 
-<body>
+<body onmousemove="showCoords(event)">
     <nav>
         <li><a href="#about">over mij</a></li>
         <li><a href="#content">mijn werk</a></li>
         <li><a href="#contact">contact</a></li>
     </nav>
-    <section id="landing" onmousemove="showCoords(event)">
+    <div id="name"><a href="#"><h1>Remco </h1><h1> Pramudita </h1></a></div>
+    <section id="landing">
+        
         <p id="artblock"></p>
         <p id="artstat">Ik wil mijn <span class="spanText">vaardigheden</span> als <span
                 class="spanText">designer</span> gebruiken
