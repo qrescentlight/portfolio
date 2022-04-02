@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #77dd77;
+        }
+
+        div {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <script>
+        let circle = document.getElementById('circle');
+
+        const onMouseMove = (e) => {
+            circle.style.left = e.pageX + 'px';
+            circle.style.top = e.pageY + 'px';
+        }
+
+        document.addEventListener('mousemove', onMouseMove);
+    </script>
+</body>
+
+</html>

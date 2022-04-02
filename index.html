@@ -17,9 +17,10 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
             cursor: default;
-                    }
+        }
 
-        p, span div {
+        p,
+        span div {
             font-family: ff-good-web-pro-wide, proxima-nova, sans-serif;
             font-weight: 300;
             font-style: normal;
@@ -45,6 +46,7 @@
             background-attachment: fixed;
             background-origin: content-box;
         }
+
         /* #landing:hover{
             cursor: url('images/monarch.png'), auto;
         } */
@@ -107,6 +109,13 @@
 
         nav li:hover {
             background-color: red;
+            mix-blend-mode: normal;
+            /* color: red; */
+        }
+
+        nav:hover {
+            mix-blend-mode: normal;
+
         }
 
         #about {
@@ -131,7 +140,8 @@
             margin: 0px;
             justify-content: center;
             align-items: center;
-            background-color: white;
+            background-color: whitesmoke;
+            /* border-top: 1vh solid red; */
         }
 
         #work li {
@@ -395,7 +405,7 @@
             display: none;
         }
 
-        
+
 
         #name {
             display: block;
@@ -523,6 +533,43 @@
             color: green;
             /* transition: 1s; */
         }
+
+        /* #where {
+            position: fixed;
+            color: red;
+            font-size: 2vw;
+        } */
+        /* 
+        #divtit{
+            width: 100vw; */
+        /* display: inline-block; */
+        /* } */
+
+        /* padding: 5vh; */
+        /* #divtit h1{ */
+        /* width: 100vw; */
+        /* padding: 5vh; */
+        /* width: inherit; */
+        /* display: inline-block; */
+        /* display: flex; */
+        /* justify-content: center;
+            align-items: center;
+            font-size: 1vw;
+        } */
+
+        #circle {
+            /* position: absolute;
+            width: 3vw;
+            height: 3vh;
+            background: red; */
+            /* mix-blend-mode: color-burn; */
+            position: absolute;
+            transform: translate(-50%, -50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
     </style>
 </head>
 
@@ -532,9 +579,13 @@
         <li><a href="#content">mijn werk</a></li>
         <li><a href="#contact">contact</a></li>
     </nav>
+    <div id="circle"></div>
+    <div id="where">
+        <!-- <h1>hi</h1> -->
+    </div>
     <div id="name"><a href="#">
-            <h1>Remco </h1>
-            <h1> Pramudita </h1>
+            <h1>Remco</h1>
+            <h1>Pramudita</h1>
         </a></div>
     <section id="landing">
 
@@ -546,7 +597,7 @@
 
     </section>
     <section id="about">
-        <section class="aboutSec" id="secOne">
+        <div class="aboutSec" id="secOne">
 
             <div id="abone">
                 <h1><span class="noshow show">Ik ben een</span> <span class="ikben">designer<div>ik maak visuele
@@ -605,10 +656,11 @@
 
 
 
-        </section>
+        </div>
 
     </section>
     <section id="content">
+        <!-- <div id="divtit"><h1>mijn werk</h1></div> -->
         <ul id="work">
             <li id="one">Het Bos in Huis</li>
             <li id="two">Braive</li>
@@ -621,8 +673,17 @@
     <section id="contact"></section>
 
     <script refer>
+        document.addEventListener('mousemove', onMouseMove);
+
+        let circle = document.getElementById('circle');
+        const onMouseMove = (e) => {
+            circle.style.left = e.pageX + 'px';
+            circle.style.top = e.pageY + 'px';
+        }
+
         window.onscroll = window.onload = function () {
             checkTop();
+            // nameTop();
         }
         function checkTop() {
 
@@ -631,6 +692,9 @@
             var bounding = about.getBoundingClientRect();
             var artblock = document.getElementById("artblock");
             var artbound = artblock.getBoundingClientRect();
+
+            var work = document.getElementById("work");
+            var workbound = work.getBoundingClientRect();
 
             // console.log(bounding)
             console.log(artbound);
@@ -650,7 +714,31 @@
                 }
                 document.querySelector("nav").style.mixBlendMode = "difference"
             }
+
+            if (workbound.top <= 0) {
+                work.style.background = "black";
+                work.style.borderTop = "1vh solid black";
+            } else {
+                work.style.background = "whitesmoke"
+                work.style.borderTop = "1vh solid green";
+            }
+            work.style.transition = "1s ease-in"
+
         }
+
+        // function nameTop() {
+        //     var i = 0;
+        //     var sections = document.querySelectorAll("section");
+        //     var secId = ["", "over mij", "mijn werk", "contact"];
+        //     var bounding = sections[i].getBoundingClientRect();
+
+        //     if (bounding.top >= 0) {
+        //         i + 1;
+        //         document.getElementById("where").innerText = secId[i];
+        //     }
+
+
+        // }
 
         setTimeout(numRot, 1);
         const spanText = document.getElementsByClassName("spanText");
@@ -667,13 +755,27 @@
             } setTimeout(numRot, 1);
         };
 
-        showCoords(event)
+        showCoords(event);
         function showCoords(event) {
             var x = event.clientX;
             var y = event.clientY;
             document.getElementById("artblock").style.marginLeft = 3 - x / 500 + "vw";
             document.getElementById("artblock").style.marginTop = 5 - y / 100 + "vh";
         }
+
+        showBlock(event);
+        function showBlock(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            document.getElementById("mouse").style.marginLeft = x + "vw";
+            document.getElementById("mouse").style.marginTop = y + "vh";
+        }
+
+        const onMouseMove = (e) => {
+            circle.style.left = e.pageX + 'px';
+            circle.style.top = e.pageY + 'px';
+        }
+        
 
     </script>
 </body>
