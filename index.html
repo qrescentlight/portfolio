@@ -420,7 +420,6 @@
     </section>
     <section id="about">
         <section class="aboutSec" id="secOne">
-            <!-- <div class="divImg" id="imgOne">Hai, ik ben Remco O/</div> -->
 
             <div id="abone">
                 <h1><span class="noshow show">Ik ben een</span> <span>designer</span>. </h1>
@@ -429,9 +428,7 @@
                 <h1><span class="noshow">Ik ben een</span> <span>plant</span>. </h1>
             </div>
             <div id="picOne">
-                <!-- <img src="images/foto_jeugd.jpg" alt=""> -->
                 <h2>
-                    <!-- ik ben Remco O/ -->
                 </h2>
             </div>
             <div id="aboutOneCont">
@@ -469,7 +466,6 @@
             <li id="four">Storytelling XR</li>
             <li id="five">Rough Hero Journey</li>
             <li id="six">UNRULY SPRING</li>
-            <!-- <li>an-ti-xiety</li> -->
         </ul>
     </section>
     <section id="contact"></section>
@@ -489,25 +485,6 @@
             // console.log(bounding)
             console.log(artbound);
 
-            // // werkt wel -> wil ik niet gebruiken
-            // if (bounding.top <= 0) {
-            //     document.querySelector("nav").style.color = "white"; for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
-            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
-            //     }
-            //     // about.style.backgroundColor = "white";
-            // // } else if (artbound.top >= 10 || artbound.top <= -110) {
-            // //     document.querySelector("nav").style.color = "white";
-            // //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
-            // //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
-            // //     }
-            // //     // about.style.backgroundColor = "black";
-            // } else {
-            //     document.querySelector("nav").style.color = "black";
-            //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
-            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "white";
-            //     }
-            // }
-
             if (bounding.top >= document.querySelector("nav").clientHeight) {
                 for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
                     document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "black";
@@ -523,20 +500,7 @@
                 }
                 document.querySelector("nav").style.mixBlendMode = "difference"
             }
-
         }
-        // artfunc();
-        // const artstat = document.getElementById("artstat");
-        // // const picture = document.getElementById("picture");
-
-        // function artfunc() {
-        //     // artstat.style.animation = "artstat 1s";
-        //     artstat.style.backgroundColor = "red";
-
-        // }
-
-
-        // document.getElementById("artstat").style.animation = "artstat 1s ease-in-out";
 
         setTimeout(numRot, 1);
         const spanText = document.getElementsByClassName("spanText");
@@ -544,16 +508,12 @@
         function numRot() {
             for (let i = 0; i < spanText.length; i++) {
                 spanText[i].style.animation = "artstat 2s ease-in-out";
-                // document.getElementById("artblock").style.animation = "artblock 2s ease-in-out";
-
             } setTimeout(numOut, 2000);
         };
 
         function numOut() {
             for (let i = 0; i < spanText.length; i++) {
                 spanText[i].style.animation = "";
-                // document.getElementById("artblock").style.animation = "";
-
             } setTimeout(numRot, 1);
         };
 
@@ -563,9 +523,7 @@
             var y = event.clientY;
             document.getElementById("artblock").style.marginLeft = 3 - x / 500 + "vw";
             document.getElementById("artblock").style.marginTop = 5 - y / 100 + "vh";
-            // document.getElementById("artblock").style.width = 3 - x / 100 + "vw";
         }
-
 
     </script>
 </body>
