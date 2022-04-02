@@ -101,9 +101,7 @@
             color: black;
             height: auto;
             display: block;
-            /* min-height: 100vh; */
             width: 100vw;
-
             padding-bottom: 15vh;
         }
 
@@ -113,7 +111,6 @@
 
         #work {
             display: grid;
-            /* grid-template-columns: 50vw 50vw; */
             grid-template-columns: 50vw 50vw;
             margin: 0px;
             justify-content: center;
@@ -263,18 +260,10 @@
         }
 
         @keyframes artstat {
-
-
             50% {
                 margin: 0.1%;
             }
-
-
         }
-
-        /* #imgOne {
-            content: url(images/profielsun.JPG);
-        } */
 
         nav li {
             padding: 1vh 1vw;
@@ -306,22 +295,16 @@
 
         #abone {
             display: block;
-            /* width: 50vw; */
-            /* margin-left: -10vw; */
             grid-area: title;
         }
 
         #aboutP {
-            /* display: none; */
             width: 30vw;
-            /* margin-top: 1vw; */
             float: right;
         }
 
         #aboutOneCont {
-            /* background-color: aliceblue; */
             width: 30vw;
-            /* margin-left: 15vw; */
             padding-top: 5vw;
             padding-right: 15vw;
             padding-left: 15vw;
@@ -337,14 +320,8 @@
         h1 {
             font-size: 3vw;
             font-weight: 900;
-            /* text-align: right; */
             text-align: left;
-            /* text-transform: lowercase; */
-            /* color: green; */
-            /* margin-bottom: 1vw; */
             width: fit-content;
-            /* margin-right: 115vw; */
-            /* margin-left: -10vw; */
         }
 
         h1 span {
@@ -357,32 +334,15 @@
             font-style: normal;
         }
 
-        /* .noshow:hover {
-            color: black
-        } */
-
         .show {
             color: black
         }
 
         #picOne {
             grid-area: profilepic;
-            position: absolute;
-            background: url(images/profielpic.png);
-            background-repeat: no-repeat;
-            background-size: auto 26vw;
-
-            background-position: top;
             position: relative;
-            width: 15vw;
-            height: 2vw;
             float: right;
-            /* margin-left: -10vw;s */
             left: -10vw;
-            /* mix-blend-mode: color-burn; */
-            /* }
-
-        #picOne:hover { */
             background: url(images/profielsun.JPG);
             background-repeat: no-repeat;
             background-size: auto 26vw;
@@ -390,34 +350,8 @@
             width: 15vw;
             height: 26vw;
             transition: 1s;
-            /* z-index: 3;
-             */
-            /* margin-left: auto */
         }
 
-        /* #pictwo {
-            background: black;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
-            position: relative;
-            /* left: 15vw; */
-        /* z-index: 2;
-            width: 14vw;
-            height: 1vw; */
-        /* top: 154vh; */
-        /* top: -22vw;
-        
-        }
-
-        #pictwo:hover{
-            background: url(images/profielsun.JPG);background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
-            width: 14vw;
-            height: 21.75vw;
-            transition: 1s;
-        } */
         .padding {
             padding-top: 5vw;
         }
@@ -438,44 +372,16 @@
             padding-top: 4vw;
             width: 40vw;
             text-align: right;
-            /* text-align: left; */
             margin-left: -35vw;
             margin-top: -10vw;
-             /* margin-top: -5vw; */
+            display: none;
         }
 
         p {
-            /* text-align: left; */
             text-align: justify;
         }
 
-        /* #geweldig{
-            font-size: ;
-        } */
-
-        #picthree {
-            background-image: url(images/foto_jeugd.jpg);
-            background-repeat: no-repeat;
-            background-position: 0vw 0vw;
-            background-size: 20vw auto;
-            /* margin-left: -5vw; */
-            margin-top: 4vw;
-            width: 8vw;
-            height: 8vw;
-
-            /* }
-
-        #picthree:hover {
-            background-image: url(images/foto_jeugd.jpg);
-            background-repeat: no-repeat;
-            background-size: 25vw auto; */
-            /* margin-left: -5vw; */
-            width: 20vw;
-            height: 20vw;
-
-        }
-
-        #name{
+        #name {
             display: block;
             color: white;
             position: fixed;
@@ -483,14 +389,10 @@
             bottom: -0.15vw;
             left: 0.1vw;
             z-index: 5;
-            /* font-size: 34vw; */
-            /* justi */
-            /* align-items: baseline; */
             mix-blend-mode: difference;
-
         }
 
-        #name h1{
+        #name h1 {
             font-size: 2vw;
             margin-top: -0.5vw;
         }
@@ -503,9 +405,12 @@
         <li><a href="#content">mijn werk</a></li>
         <li><a href="#contact">contact</a></li>
     </nav>
-    <div id="name"><a href="#"><h1>Remco </h1><h1> Pramudita </h1></a></div>
+    <div id="name"><a href="#">
+            <h1>Remco </h1>
+            <h1> Pramudita </h1>
+        </a></div>
     <section id="landing">
-        
+
         <p id="artblock"></p>
         <p id="artstat">Ik wil mijn <span class="spanText">vaardigheden</span> als <span
                 class="spanText">designer</span> gebruiken
@@ -547,16 +452,11 @@
                 </h1>
             </div>
             <div></div>
-            <div id="picthree"></div>
+            <div></div>
             <p id="watikkan">Ik weet hoe het is om mentaal door het leven te struggelen en mij had enorm veel leed
                 gespaard kunnen blijven als ik als kind de juiste hulp had gekregen. Maar toen ik eindelijk die hulp had
                 gekregen, had ik er ook ontzettend veel aan.</p>
-            <div></div>
-            <h1 id="hulp">Als ik voor een <span>ander</span> iets in dat <span>proces</span> kan betekenen, dan
-                zou dat best wel heel erg
-                <span id="geweldig"> geweldig</span>
-                zijn.
-            </h1>
+
 
         </section>
 
