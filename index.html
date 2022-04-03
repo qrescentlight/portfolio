@@ -549,7 +549,7 @@
             "lione2 lione3"            ; */
             /* grid-template-columns: 30vw 30vw;
             grid-template-rows: 60vw 10vw; */
-            /* justify-content: center; */
+            justify-content: center;
             /* align-items: flex-end; */
             /* margin: 0%;
             padding: 0%; */
@@ -571,7 +571,7 @@
             padding: 0%; */
             /* align-self: flex-end; */
             /* align-self: flex-start; */
-            background-color: aqua;
+            background-color: deepskyblue;
         }
 
         #lione div {
@@ -583,8 +583,7 @@
             padding-top: 4vh;
         }
 
-        #lionepic,
-        img {
+        #lionepic {
             /* grid-area: lione1; */
             /* display: block; */
             background: url(gifs/bosinhuis_2.gif);
@@ -596,16 +595,22 @@
             height: 30vw;
             /* max-height: 30vw; */
             align-items: unset;
-            justify-self: center;
 
+        }
+
+        img{
+          object-fit: cover;
+            width: 60vw;
+            height: 30vw;  
         }
 
         #lione p {
             /* grid-area: lione3; */
             /* display: block; */
             color: black;
-            background-color: rgb(70, 145, 211);
+            /* background-color: white; */
             padding: 1vw;
+            font-size: 1vw;
             /* font-family: ff-good-web-pro-wide, proxima-nova, sans-serif;
             font-weight: 300;
             font-style: normal; */
@@ -624,31 +629,30 @@
             /* position:static; */
             padding: 2vh 2vw;
             /* font-style: bold; */
-            background-color: green;
-            color: white;
-            margin-top: 10vw;
-            margin-left: 20vw;
+            color: deepskyblue;
+            box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+            background-color: black;
+            /* margin-bottom: 0px;
+            margin-right: 0px; */
         }
 
+        /* button{
+
+        } */
+
         #lione button:hover {
-            background-color: black;
-            color: green;
+
+            color: black;
+            background-color: deepskyblue;
         }
 
         .postheader {
-            display: flex;
+            display: block;
         }
 
-        #lionename h1{
-            position: fixed;
-            margin-left: 0%;
-            /* margin-top: -14vh; */
-             height: 100vh; 
-            max-height: 100vh;
-            max-width: 20vw;
-            z-index: 7;
-            left: 0px;
-            top:0px
+        #lionego p {
+            padding: 1vw 0vw;
+            width: 30vw;
         }
     </style>
 </head>
@@ -753,31 +757,35 @@
             </a>
         </ul>
     </section>
-    <section id="contact" style="height: 70vh;"></section>
+    <section id="contact" style="height: 70vh; display: flex; justify-content: center; align-items: center; ">
+        contactinformatie <br>
+        contactformulier <br>
+        linked in</section>
     <section id="lione">
-        <div id="lionename">
-            <h1>Het Bos in Huis</h1>
-        </div>
-        <div id="lionepic">
-            <button>probeer het uit</button>
-        </div>
+        <div id="lionepic"><a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>probeer het uit</button></a></div>
         <div class="postheader">
             <div id="lionetog">
+                <h1>Het Bos in Huis</h1>
                 <p>Kort beschrijving over het bos in huis</p>
             </div>
             <div id="lionego">
                 <p>korte beschrijving proces</p>
                 <p>Korte beschrijving aandeel</p>
-                <p>Korte beschrijving reflectie</p>
+                <p>Korte beschrijving reflectie: Tijdens mijn stage wil ik ontdekken op welke verschillende manieren ik
+                    mijn kwaliteiten als ontwerper
+                    kan toepassen om anderen te helpen met hun geestelijke gezondheid. Ik wil mijzelf blijven uitdagen
+                    als
+                    programmeur, maar ook ervaring opdoen in het maken van goede visuele ontwerpen.</p>
 
-                <div></div>
+                <!-- <div></div> -->
                 <div><img src="images/4883881.png" alt=""></div>
-                <div><img src="images/4883881.png" alt=""></div>
-                <div></div>
-                <div><img src="" alt=""></div>
-                <div></div>
+                <div><img src="images/candytuft.png" alt=""></div>
+                <!-- <div></div> -->
+                <div><img src="images/begonia.png" alt=""></div>
+                <!-- <div></div> -->
             </div>
         </div>
+        <div><a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>try it out</button></a> <a href="#work"><button>see more work</button></a></div>
         <!-- <div><p>dddddd</p></div> -->
     </section>
 
@@ -787,7 +795,7 @@
         window.onscroll = window.onload = window.onmousemove = function () {
 
             checkTop();
-            handleMouseMove(event);
+            // handleMouseMove(event);
 
         }
         // picfunc();
@@ -821,7 +829,7 @@
 
             console.log(artbound);
             if (workbound.top <= 0) {
-                work.style.background = "black";
+                work.style.background = "midnightblue";
             } else {
                 work.style.background = "whitesmoke"
             }
