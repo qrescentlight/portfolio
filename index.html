@@ -24,7 +24,7 @@
         }
 
         #name:hover {
-            color: green;
+            color: pink;
         }
 
         p,
@@ -38,7 +38,7 @@
             width: 100vw;
             height: 100vh;
             display: flex;
-            background: whitesmoke;
+            /* background: whitesmoke; */
         }
 
         #landing {
@@ -104,11 +104,36 @@
             font-size: 1vw;
             color: white;
             mix-blend-mode: difference;
-            transition: 0.2s ease-in-out;
+            pointer-events: none;
+            /* transition: 0.2s ease-in-out; */
         }
 
-        nav:hover {
+        nav a:hover {
+            background-color: orangered;
+            /* mix-blend-mode: normal; */
+        }
+
+        nav li {
+            /* mix-blend-mode: normal; */
+            pointer-events: auto;
+        }
+
+        /* nav li:hover nav {
+            pointer-events: none;
+        } */
+
+        /* nav:hover li, nav a:hover li, nav a li:hover, nav:hover, nav li {
             mix-blend-mode: normal;
+
+        } */
+
+
+        /* nav:hover {
+            pointer-events: default;
+            mix-blend-mode: normal;
+        }
+        nav li{
+            pointer-events: default;
         }
 
         nav li {
@@ -117,7 +142,7 @@
         }
 
         nav li:hover {
-            background-color: red;
+            background-color: orangered;
             mix-blend-mode: difference;
         }
 
@@ -125,12 +150,17 @@
             mix-blend-mode: normal;
         }
 
+        nav li nav {
+            pointer-events: none;
+
+        } */
+
         #about {
-            background: whitesmoke;
+            /* background: wheat; */
             display: flex;
             justify-content: center;
             align-items: center;
-            color: black;
+            color: #0A0A0A;
             height: auto;
             display: block;
             width: 100vw;
@@ -142,32 +172,41 @@
         }
 
         #work {
-            display: grid;
-            grid-template-columns: 50vw 50vw;
-            margin: 0px;
-            justify-content: center;
-            align-items: center;
+            display: block;
+            /* grid-template-columns: 50vw 50vw; */
+            margin: 10vw 0vw 0vw;
+            /* justify-content: center;
+            align-items: center; */
+            /* height: 100vh; */
         }
 
         #work li {
-            display: flex;
-            justify-content: center;
+            display: block;
+            /* justify-content: center;
             align-items: center;
             justify-self: center;
-            align-self: center;
-            height: 30vh;
-            width: 50vw;
-            font-size: 2vw;
+            align-self: center; */
+            /* height: 24vh;
+            width: 35vw; */
             text-align: center;
-            font-size: 6vw;
+            font-size: 4vw;
+            text-align: right;
+            width: 50vw;
         }
 
         #content {
 
-            padding-top: 10vh;
+            padding-top: 15vh;
             height: auto;
+            min-height: 100vh;
             font-family: Proxima Nova Black, proxima-nova;
+        }
+
+        #about,
+        #content,
+        #contact {
             transition: 1s;
+
         }
 
         #contact {
@@ -370,7 +409,7 @@
         }
 
         .show {
-            color: black
+            color: #0A0A0A
         }
 
         #picOne {
@@ -466,7 +505,7 @@
             margin-left: 21vw;
             padding: 1vh 0vw;
             font-size: 1vw;
-            background-color: black;
+            background-color: #0A0A0A;
             color: white;
             transition: 0.5s;
             max-width: 0vw;
@@ -509,7 +548,7 @@
         }
 
         #buttons button:hover {
-            background-color: black;
+            background-color: #0A0A0A;
             color: green;
         }
 
@@ -524,6 +563,9 @@
             transform: translate(-50%, -50%);
             top: -100vh;
             left: -100vw;
+            transition: height 0.3s ease-out, width 0.3s ease-out, border-radius 0.3s ease-out;
+            /* transition: height 0.5s ease-out; */
+            border-radius: 100%;
         }
 
         #mouseview {
@@ -551,7 +593,7 @@
             font-weight: 900;
             font-size: 5vw;
             text-transform: uppercase;
-            background-color: deepskyblue;
+            background-color: #0AB0F5;
         }
 
         #lione div {
@@ -560,14 +602,24 @@
         }
 
         #lionepic {
+            width: 60vw;
+            height: 30vw;
+            align-items: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        #lioneback {
+
             background: url(gifs/bosinhuis_2.gif);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 0vw -50vh;
             width: 60vw;
             height: 30vw;
-            align-items: unset;
-
         }
 
         img {
@@ -577,7 +629,7 @@
         }
 
         #lione p {
-            color: black;
+            color: #0A0A0A;
             padding: 1vw;
             font-size: 1vw;
         }
@@ -590,16 +642,28 @@
 
         #lione button {
             all: unset;
+            font-size: 1vw;
             padding: 2vh 2vw;
-            color: deepskyblue;
+            color: #0AB0F5;
             box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-            background-color: black;
+            background-color: #0A0A0A;
+        }
+
+        #lione a {
+            position: absolute;
+            align-self: flex-end;
+            justify-self: flex-start;
+        }
+
+        #lionepic button {
+            background-color: #0AB0F5;
+            color: #0A0A0A;
+            z-index: 4;
         }
 
         #lione button:hover {
-
-            color: black;
-            background-color: deepskyblue;
+            color: #0AB0F5;
+            background-color: #0A0A0A;
         }
 
         .postheader {
@@ -610,6 +674,10 @@
             padding: 1vw 0vw;
             width: 30vw;
         }
+
+        /* #about{
+            background-color: wheat;
+        } */
     </style>
 </head>
 
@@ -618,7 +686,9 @@
         <a href="#about">
             <li>over mij</li>
         </a>
-        <li><a href="#content">mijn werk</li></a>
+        <a href="#content">
+            <li>mijn werk</li>
+        </a>
         <a href="#contact">
             <li>contact</li>
         </a>
@@ -693,22 +763,22 @@
 
     <section id="content">
         <ul id="work">
-            <a href="#lione">
+            <a href="#lione" class="pic">
                 <li id="one" class="pic">Het Bos in Huis</li>
             </a>
-            <a href="#litwo">
+            <a href="#litwo" class="pic">
                 <li id="two" class="pic">Braive</li>
             </a>
-            <a href="#lithree">
+            <a href="#lithree" class="pic">
                 <li id="three" class="pic">Persuasion</li>
             </a>
-            <a href="#lifour">
+            <a href="#lifour" class="pic">
                 <li id="four" class="pic">Storytelling XR</li>
             </a>
-            <a href="#lifive">
+            <a href="#lifive" class="pic">
                 <li id="five" class="pic">Rough Hero Journey</li>
             </a>
-            <a href="#lisix">
+            <a href="#lisix" class="pic">
                 <li id="six" class="pic">UNRULY SPRING</li>
             </a>
         </ul>
@@ -720,7 +790,9 @@
         linked in</section>
 
     <section id="lione">
-        <div id="lionepic"><a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>probeer het uit</button></a>
+        <div id="lionepic">
+            <div class="pic" id="lioneback"></div>
+            <a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>probeer het uit</button></a>
         </div>
         <div class="postheader">
             <div id="lionetog">
@@ -768,9 +840,11 @@
 
             console.log(artbound);
             if (workbound.top <= 0) {
-                work.style.background = "midnightblue";
+                about.style.background = "#0A214C";
+                work.style.backgroundColor = "#0A214C";
             } else {
-                work.style.background = "whitesmoke"
+                about.style.background = "whitesmoke"
+                work.style.backgroundColor = "whitesmoke"
             }
         }
 
@@ -804,6 +878,57 @@
         };
 
         document.addEventListener("mousemove", handleMouseMove, false);
+
+        let p = document.querySelectorAll("p");
+        let h1 = document.querySelectorAll("h1, #artstat");
+        let pic = document.querySelectorAll(".pic, img");
+        let button = document.querySelectorAll("button, a");
+
+        let olen = "2vw";
+        let owid = "2vw";
+        let obdr = "0%";
+        let ombm = "exclusion";
+        let oopa = "1";
+        let obkc = "white";
+
+        let nlen = olen;
+        let nwid = owid;
+        // let obor = "0px";
+        // let nbor = nbor;
+        let nbdr = obdr;
+        let nmbm = ombm;
+        let nopa = oopa;
+        let nbkc = obkc;
+
+        document.getElementById("mouse").style.height = nlen;
+        document.getElementById("mouse").style.width = nwid;
+        document.getElementById("mouse").style.borderRadius = nbdr;
+
+        selector(pic, "6vw", "6vw", "100%", "normal", "0.3", "orangered");
+        selector(p, "10vw", "10vw", "100%", ombm, oopa, obkc);
+        selector(h1, "4vw", "10vw", obdr, ombm, oopa, obkc);
+        selector(button, "0.5vw", "0.5vw", "100%", ombm, oopa, obkc);
+
+        function selector(select, nlen, nwid, nbdr, nmbm, nopa, nbkc) {
+            select.forEach(element => {
+                element.onmouseover = function () {
+                    document.getElementById("mouse").style.height = nlen;
+                    document.getElementById("mouse").style.width = nwid;
+                    document.getElementById("mouse").style.borderRadius = nbdr;
+                    document.getElementById("mouse").style.mixBlendMode = nmbm;
+                    document.getElementById("mouse").style.opacity = nopa;
+                    document.getElementById("mouse").style.backgroundColor = nbkc;
+                }
+                element.onmouseout = function () {
+                    document.getElementById("mouse").style.height = olen;
+                    document.getElementById("mouse").style.width = owid;
+                    document.getElementById("mouse").style.borderRadius = obdr;
+                    document.getElementById("mouse").style.mixBlendMode = ombm;
+                    document.getElementById("mouse").style.opacity = oopa;
+                    document.getElementById("mouse").style.backgroundColor = obkc;
+                }
+            });
+        }
 
     </script>
 </body>
