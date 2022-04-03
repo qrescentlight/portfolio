@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/reset.css">
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/izt0eqk.css"> -->
     <link rel="stylesheet" href="https://use.typekit.net/izt0eqk.css">
     <style>
         body {
@@ -55,10 +54,6 @@
             background-attachment: fixed;
             background-origin: content-box;
         }
-
-        /* #landing:hover{
-            cursor: url('images/monarch.png'), auto;
-        } */
 
         #artstat {
             position: absolute;
@@ -110,7 +105,6 @@
             font-size: 1vw;
             color: white;
             mix-blend-mode: difference;
-            /* mix-blend-mode: normal; */
             transition: 0.2s ease-in-out;
         }
 
@@ -122,14 +116,6 @@
         nav li:hover {
             background-color: red;
             mix-blend-mode: normal;
-            /* color: red; */
-        }
-
-        nav:hover {
-            /* mix-blend-mode: normal; */
-            /* mix-blend-mode: difference; */
-
-
         }
 
         #about {
@@ -154,8 +140,6 @@
             margin: 0px;
             justify-content: center;
             align-items: center;
-            /* background-color: black; */
-            /* border-top: 1vh solid red; */
         }
 
         #work li {
@@ -189,7 +173,6 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 0vw -25vw;
-            /* background-position: 0vw 10vw; */
             background-clip: text;
         }
 
@@ -393,7 +376,6 @@
             background-size: auto 25.7vw;
             background-position: top;
             width: 15vw;
-            /* height: 26vw; */
             transition: 1s;
         }
 
@@ -423,8 +405,6 @@
             display: none;
         }
 
-
-
         #name {
             display: block;
             color: white;
@@ -445,13 +425,9 @@
             background-color: gray;
             margin: 5vw;
             margin-left: 15vw;
-            /* margin-left: 20vw; */
-
             background: url(images/foto_jeugd.jpg);
             background-size: cover;
             background-repeat: no-repeat;
-            /* background-position: 0vw -5vw; */
-
             width: 15vw;
             height: 11.7vw;
             font-size: 1vw;
@@ -471,23 +447,12 @@
             color: white;
         }
 
-        /* #struggle:hover {
-        height: 30vw;
-
-        } */
-
-        /* .ikben {
-            cursor: pointer;
-        } */
-
         .ikben:hover {
-            /* text-decoration: underline; */
             transition: 1.2s ease-out;
             color: darkgreen;
         }
 
         span div {
-            /* opacity: 0; */
             width: 0vw;
             position: absolute;
             margin-top: -8vh;
@@ -509,21 +474,14 @@
         span:hover div {
             font-style: normal;
             padding: 1vh 1vw;
-            /* opacity: 1; */
-            /* z-index: 5; */
             width: auto;
             transition: 1.2s ease-in-out;
             max-width: 20vw;
         }
 
         #visdes {
-            /* grid-area: 6 / 2 / span 1 / span 1; */
-            /* margin-top: -5vw; */
             margin: 1vw 0vw;
-            /* margin-left: -5vw; */
             width: 50vw;
-
-            /* text-align: end; */
         }
 
         #buttons {
@@ -549,31 +507,7 @@
         #buttons button:hover {
             background-color: black;
             color: green;
-            /* transition: 1s; */
         }
-
-        /* #where {
-            position: fixed;
-            color: red;
-            font-size: 2vw;
-        } */
-        /* 
-        #divtit{
-            width: 100vw; */
-        /* display: inline-block; */
-        /* } */
-
-        /* padding: 5vh; */
-        /* #divtit h1{ */
-        /* width: 100vw; */
-        /* padding: 5vh; */
-        /* width: inherit; */
-        /* display: inline-block; */
-        /* display: flex; */
-        /* justify-content: center;
-            align-items: center;
-            font-size: 1vw;
-        } */
 
         #mouse {
             position: fixed;
@@ -583,7 +517,6 @@
             z-index: 10;
             mix-blend-mode: exclusion;
             pointer-events: none;
-            /* scroll-behavior: smooth; */
             transform: translate(-50%, -50%);
             top: -100vh;
             left: -100vw;
@@ -605,16 +538,18 @@
 
 <body onmousemove="showCoords(event)">
     <nav>
-        <a href="#about"><li>over mij</li></a>
+        <a href="#about">
+            <li>over mij</li>
+        </a>
         <li><a href="#content">mijn werk</li></a>
-        <a href="#contact"><li>contact</li></a>
+        <a href="#contact">
+            <li>contact</li>
+        </a>
     </nav>
     <div>
         <div id="mouse"></div>
     </div>
-    <div id="where">
-        <!-- <h1>hi</h1> -->
-    </div>
+    <div id="where"> </div>
     <div id="name"><a href="#">
             <h1>Remco </h1>
             <h1> Pramudita </h1>
@@ -650,10 +585,6 @@
             </div>
             <div id="aboutOneCont">
                 <p id="aboutP">
-                    <!-- Ik drink graag thee, ik houd er van om te haken en heb een grote liefde voor
-                    speelkaarten. Ik ben ook een designer en als designer wil ik mijn kennis en vaardigheden gebruiken
-                    om
-                    anderen te helpen met hun geestelijke gezondheid. -->
                     Ik weet nog niet goed wie ik ben als persoon of als ontwerper, maar ik weet wel wat ik wil gaan
                     doen. Ik wil mijn kennis, vaardigheden en ervaringen als persoon en designer gebruiken om anderen te
                     helpen met hun geestelijke gezondheid; dat is mijn doel, mijn missie.
@@ -661,26 +592,18 @@
             </div>
             <div></div>
             <div id="pictwo"></div>
-
-
             <div class="padding" id="stage">
                 <h1>Ik ben op zoek naar een<span> stage</span> <br> om mijn <span>missie</span> te
                     <span>volbrengen</span>.
                 </h1>
             </div>
             <div></div>
-            <div id="struggle">
-                <!-- <div>mijn beste vriend en ik met onze beste vrienden</div> -->
-            </div>
+            <div id="struggle"> </div>
             <p id="watikkan">
                 Tijdens mijn stage wil ik ontdekken op welke verschillende manieren ik mijn kwaliteiten als ontwerper
                 kan toepassen om anderen te helpen met hun geestelijke gezondheid. Ik wil mijzelf blijven uitdagen als
                 programmeur, maar ook ervaring opdoen in het maken van goede visuele ontwerpen.
             </p>
-            <!-- <div>
-                <button></button>
-            </div> -->
-
             <div>
                 <h1 id="visdes">Kun jij mij daarbij helpen of wil je meer over mij te weten komen?</h1>
             </div>
@@ -692,7 +615,6 @@
 
     </section>
     <section id="content">
-        <!-- <div id="divtit"><h1>mijn werk</h1></div> -->
         <ul id="work">
             <a href="#lione">
                 <li id="one">Het Bos in Huis</li>
@@ -722,9 +644,7 @@
     <script refer>
         window.onscroll = window.onload = window.onmousemove = function () {
 
-            // showCoords(event);
             checkTop();
-            // nameTop();
             handleMouseMove(event);
         }
         function checkTop() {
@@ -742,79 +662,13 @@
             var contact = document.getElementById("contact");
             var contbound = contact.getBoundingClientRect();
 
-            // console.log(bounding)
             console.log(artbound);
-
-            // if (bounding.top >= document.querySelector("nav").clientHeight) {
-            //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
-            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "black";
-            //         document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
-            //     }
-            //     document.querySelector("nav").style.mixBlendMode = "normal"
-
-            // } else {
-            //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
-            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
-            //         document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
-
-            //     }
-            //     document.querySelector("nav").style.mixBlendMode = "difference"
-            // }
-
             if (workbound.top <= 0) {
-                // document.getElementById("content").style.background = "black";
-                // document.getElementById("contact").style.background = "black";
-                // document.getElementById("about").style.background = "black";
-
                 work.style.background = "black";
-                // work.style.borderTop = "1vh solid black";
             } else {
-                // document.getElementById("content").style.background = "whitesmoke";
-                // document.getElementById("contact").style.background = "whitesmoke";
-                // document.getElementById("about").style.background = "whitesmoke";
-
                 work.style.background = "whitesmoke"
-                // work.style.borderTop = "1vh solid green"; 
             }
-
-            // if (bounding.top <= 0) {
-            //     document.getElementById("about").style.background = "black";
-
-            //     work.style.background = "black";
-            //     // work.style.borderTop = "1vh solid black";
-            // } else {
-            //     document.getElementById("about").style.background = "whitesmoke";
-
-            //     work.style.background = "whitesmoke"    
-            //     // work.style.borderTop = "1vh solid green"; 
-            // }if (contbound.top <= 0) {
-            //     document.getElementById("contact").style.background = "black";
-
-            //     work.style.background = "black";
-            //     // work.style.borderTop = "1vh solid black";
-            // } else {
-            //     document.getElementById("contact").style.background = "whitesmoke";
-
-            //     work.style.background = "whitesmoke"    
-            //     // work.style.borderTop = "1vh solid green"; 
-            // }
-            // work.style.transition = "1s ease-in"    
-
         }
-
-        // function nameTop() {
-        //     var i = 0;
-        //     var sections = document.querySelectorAll("section");
-        //     var secId = ["", "over mij", "mijn werk", "contact"];
-        //     var bounding = sections[i].getBoundingClientRect();
-
-        //     if (bounding.top >= 0) {
-        //         i + 1;
-        //         document.getElementById("where").innerText = secId[i];
-        //     }
-
-
-        // }
 
         setTimeout(numRot, 1);
         const spanText = document.getElementsByClassName("spanText");
@@ -830,25 +684,6 @@
                 spanText[i].style.animation = "";
             } setTimeout(numRot, 1);
         };
-
-
-        // function showCoords(event) {
-        //     var x = event.clientX;
-        //     var y = event.clientY;
-        //     document.getElementById("artblock").style.marginLeft = 3 - x / 500 + "vw";
-        //     document.getElementById("artblock").style.marginTop = 5 - y / 100 + "vh";
-        // // }
-
-        // // showBlock(event);
-        // // function showBlock(event) {
-        // //     var x = event.clientX;
-        // //     var y = event.clientY;
-        //     document.getElementById("mouse").style.marginLeft = event.pageX + 'px';
-        //     document.getElementById("mouse").style.marginTop = event.pageY + 'px';
-
-        //     // circle.style.left = e.pageX + 'px';
-        //     // circle.style.top = e.pageY + 'px';
-        // }
 
         handleMouseMove = (event) => {
             const y = event.pageY;
