@@ -539,7 +539,116 @@
             left: 0px;
             z-index: 10;
             mix-blend-mode: difference;
+        }
 
+        #lione {
+            background-color: whitesmoke;
+            display: grid;
+            /* grid-template-areas: 
+            "lione1 lione1"
+            "lione2 lione3"            ; */
+            /* grid-template-columns: 30vw 30vw;
+            grid-template-rows: 60vw 10vw; */
+            /* justify-content: center; */
+            /* align-items: flex-end; */
+            /* margin: 0%;
+            padding: 0%; */
+            /* padding: 10vh 20vw; */
+            width: 100vw;
+            height: auto;
+            padding: 10vh 0vh;
+            /* min-height: 100vh */
+        }
+
+        #lione h1 {
+            /* grid-area: lione2; */
+            /* display: block; */
+            font-family: proxima nova condensed;
+            font-weight: 900;
+            font-size: 5vw;
+            text-transform: uppercase;
+            /* margin: 0%;
+            padding: 0%; */
+            /* align-self: flex-end; */
+            /* align-self: flex-start; */
+            background-color: aqua;
+        }
+
+        #lione div {
+            width: 60vw;
+            /* align-items: flex-end; */
+            /* display: flex; */
+            /* height: auto; */
+            /* overflow-y: hidden; */
+            padding-top: 4vh;
+        }
+
+        #lionepic,
+        img {
+            /* grid-area: lione1; */
+            /* display: block; */
+            background: url(gifs/bosinhuis_2.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0vw -50vh;
+
+            width: 60vw;
+            height: 30vw;
+            /* max-height: 30vw; */
+            align-items: unset;
+            justify-self: center;
+
+        }
+
+        #lione p {
+            /* grid-area: lione3; */
+            /* display: block; */
+            color: black;
+            background-color: rgb(70, 145, 211);
+            padding: 1vw;
+            /* font-family: ff-good-web-pro-wide, proxima-nova, sans-serif;
+            font-weight: 300;
+            font-style: normal; */
+
+
+        }
+
+        #lionetog {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            padding-top: 4vh;
+        }
+
+        #lione button {
+            all: unset;
+            /* position:static; */
+            padding: 2vh 2vw;
+            /* font-style: bold; */
+            background-color: green;
+            color: white;
+            margin-top: 10vw;
+            margin-left: 20vw;
+        }
+
+        #lione button:hover {
+            background-color: black;
+            color: green;
+        }
+
+        .postheader {
+            display: flex;
+        }
+
+        #lionename h1{
+            position: fixed;
+            margin-left: 0%;
+            /* margin-top: -14vh; */
+             height: 100vh; 
+            max-height: 100vh;
+            max-width: 20vw;
+            z-index: 7;
+            left: 0px;
+            top:0px
         }
     </style>
 </head>
@@ -645,7 +754,32 @@
         </ul>
     </section>
     <section id="contact" style="height: 70vh;"></section>
-    <section id="lione"></section>
+    <section id="lione">
+        <div id="lionename">
+            <h1>Het Bos in Huis</h1>
+        </div>
+        <div id="lionepic">
+            <button>probeer het uit</button>
+        </div>
+        <div class="postheader">
+            <div id="lionetog">
+                <p>Kort beschrijving over het bos in huis</p>
+            </div>
+            <div id="lionego">
+                <p>korte beschrijving proces</p>
+                <p>Korte beschrijving aandeel</p>
+                <p>Korte beschrijving reflectie</p>
+
+                <div></div>
+                <div><img src="images/4883881.png" alt=""></div>
+                <div><img src="images/4883881.png" alt=""></div>
+                <div></div>
+                <div><img src="" alt=""></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- <div><p>dddddd</p></div> -->
+    </section>
 
 
 
@@ -666,7 +800,7 @@
         //     //     }
         //     // });
         //     picarray.onmouseover = function (){
-                
+
         //     }
         // }
 
@@ -693,6 +827,7 @@
             }
         }
 
+
         setTimeout(numRot, 1);
         const spanText = document.getElementsByClassName("spanText");
 
@@ -716,6 +851,13 @@
             const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
             ref.style.left = x - scrollLeft + 'px';
             ref.style.top = y - scrollTop + 'px';
+
+
+            // // block in landing
+            // var x = event.clientX;
+            // var y = event.clientY;
+            document.getElementById("artblock").style.marginLeft = 3 - x / 500 + "vw";
+            document.getElementById("artblock").style.marginTop = 5 - y / 100 + "vh";
         };
 
         document.addEventListener("mousemove", handleMouseMove, false);
