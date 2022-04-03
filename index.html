@@ -17,6 +17,15 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
             cursor: default;
+            cursor: none;
+        }
+
+        a {
+            cursor: none;
+        }
+
+        #name:hover {
+            color: green;
         }
 
         p,
@@ -100,10 +109,13 @@
             z-index: 9;
             font-size: 1vw;
             color: white;
+            mix-blend-mode: difference;
+            /* mix-blend-mode: normal; */
             transition: 0.2s ease-in-out;
         }
 
         nav li {
+            mix-blend-mode: difference;
             margin: 0vw 1vw;
         }
 
@@ -114,7 +126,9 @@
         }
 
         nav:hover {
-            mix-blend-mode: normal;
+            /* mix-blend-mode: normal; */
+            /* mix-blend-mode: difference; */
+
 
         }
 
@@ -140,7 +154,7 @@
             margin: 0px;
             justify-content: center;
             align-items: center;
-            background-color: whitesmoke;
+            /* background-color: black; */
             /* border-top: 1vh solid red; */
         }
 
@@ -150,7 +164,7 @@
             align-items: center;
             justify-self: center;
             align-self: center;
-            height: 40vh;
+            height: 30vh;
             width: 50vw;
             font-size: 2vw;
             text-align: center;
@@ -158,8 +172,11 @@
         }
 
         #content {
+
+            padding-top: 10vh;
             height: auto;
             font-family: Proxima Nova Black, proxima-nova;
+            transition: 1s;
         }
 
         #contact {
@@ -167,22 +184,23 @@
         }
 
         #one {
-            background: url(images/scrnbos.png);
+            background: url(gifs/bosinhuis_2.gif);
             -webkit-text-fill-color: transparent;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-position: 0vw -25vw;
+            /* background-position: 0vw 10vw; */
             background-clip: text;
         }
 
         #one:hover {
             background: transparent;
-            background: url(images/scrnbos.png);
+            background: url(gifs/bosinhuis_2.gif);
             background-color: aliceblue;
             -webkit-text-fill-color: white;
+            background-position: 0vw -25vw;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
             background-clip: none;
         }
 
@@ -247,7 +265,7 @@
         }
 
         #five {
-            background: url(images/scrnrhj.png);
+            background: url(gifs/hero.gif);
             -webkit-text-fill-color: transparent;
             background-repeat: no-repeat;
             background-size: cover;
@@ -257,7 +275,7 @@
 
         #five:hover {
             background: transparent;
-            background: url(images/scrnrhj.png);
+            background: url(gifs/hero.gif);
             background-color: aliceblue;
             -webkit-text-fill-color: white;
             background-repeat: no-repeat;
@@ -458,9 +476,9 @@
 
         } */
 
-        .ikben {
+        /* .ikben {
             cursor: pointer;
-        }
+        } */
 
         .ikben:hover {
             /* text-decoration: underline; */
@@ -529,7 +547,7 @@
         }
 
         #buttons button:hover {
-            background-color: whitesmoke;
+            background-color: black;
             color: green;
             /* transition: 1s; */
         }
@@ -539,41 +557,61 @@
             color: red;
             font-size: 2vw;
         } */
-/* 
+        /* 
         #divtit{
             width: 100vw; */
-            /* display: inline-block; */
+        /* display: inline-block; */
         /* } */
 
-            /* padding: 5vh; */
+        /* padding: 5vh; */
         /* #divtit h1{ */
-            /* width: 100vw; */
-            /* padding: 5vh; */
-            /* width: inherit; */
-            /* display: inline-block; */
-            /* display: flex; */
-            /* justify-content: center;
+        /* width: 100vw; */
+        /* padding: 5vh; */
+        /* width: inherit; */
+        /* display: inline-block; */
+        /* display: flex; */
+        /* justify-content: center;
             align-items: center;
             font-size: 1vw;
         } */
 
-        #mouse{
-            position: absolute;
+        #mouse {
+            position: fixed;
             width: 3vw;
-            height: 3vh;
-            background: red;
-            mix-blend-mode: color-burn;
+            height: 3vw;
+            background: white;
+            z-index: 10;
+            mix-blend-mode: exclusion;
+            pointer-events: none;
+            /* scroll-behavior: smooth; */
+            transform: translate(-50%, -50%);
+            top: -100vh;
+            left: -100vw;
+        }
+
+        #mouseview {
+            position: fixed;
+            background-color: rgba(32, 234, 153, 0.126);
+            width: 100vw;
+            height: 100vh;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            mix-blend-mode: difference;
+
         }
     </style>
 </head>
 
 <body onmousemove="showCoords(event)">
     <nav>
-        <li><a href="#about">over mij</a></li>
-        <li><a href="#content">mijn werk</a></li>
-        <li><a href="#contact">contact</a></li>
+        <a href="#about"><li>over mij</li></a>
+        <li><a href="#content">mijn werk</li></a>
+        <a href="#contact"><li>contact</li></a>
     </nav>
-    <div id="mouse"></div>
+    <div>
+        <div id="mouse"></div>
+    </div>
     <div id="where">
         <!-- <h1>hi</h1> -->
     </div>
@@ -656,20 +694,38 @@
     <section id="content">
         <!-- <div id="divtit"><h1>mijn werk</h1></div> -->
         <ul id="work">
-            <li id="one">Het Bos in Huis</li>
-            <li id="two">Braive</li>
-            <li id="three">Persuasion</li>
-            <li id="four">Storytelling XR</li>
-            <li id="five">Rough Hero Journey</li>
-            <li id="six">UNRULY SPRING</li>
+            <a href="#lione">
+                <li id="one">Het Bos in Huis</li>
+            </a>
+            <a href="#litwo">
+                <li id="two">Braive</li>
+            </a>
+            <a href="#lithree">
+                <li id="three">Persuasion</li>
+            </a>
+            <a href="#lifour">
+                <li id="four">Storytelling XR</li>
+            </a>
+            <a href="#lifive">
+                <li id="five">Rough Hero Journey</li>
+            </a>
+            <a href="#lisix">
+                <li id="six">UNRULY SPRING</li>
+            </a>
         </ul>
     </section>
-    <section id="contact"></section>
+    <section id="contact" style="height: 70vh;"></section>
+    <section id="lione"></section>
+
+
 
     <script refer>
-        window.onscroll = window.onload = function () {
+        window.onscroll = window.onload = window.onmousemove = function () {
+
+            // showCoords(event);
             checkTop();
             // nameTop();
+            handleMouseMove(event);
         }
         function checkTop() {
 
@@ -679,36 +735,70 @@
             var artblock = document.getElementById("artblock");
             var artbound = artblock.getBoundingClientRect();
 
-            var work = document.getElementById("work");
+            var work = document.getElementById("content");
             var workbound = work.getBoundingClientRect();
+
+
+            var contact = document.getElementById("contact");
+            var contbound = contact.getBoundingClientRect();
 
             // console.log(bounding)
             console.log(artbound);
 
-            if (bounding.top >= document.querySelector("nav").clientHeight) {
-                for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
-                    document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "black";
-                    document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
-                }
-                document.querySelector("nav").style.mixBlendMode = "normal"
+            // if (bounding.top >= document.querySelector("nav").clientHeight) {
+            //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
+            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "black";
+            //         document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
+            //     }
+            //     document.querySelector("nav").style.mixBlendMode = "normal"
 
-            } else {
-                for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
-                    document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
-                    document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
+            // } else {
+            //     for (let i = 0; i < document.querySelector("nav").querySelectorAll("li").length; i++) {
+            //         document.querySelector("nav").querySelectorAll("li")[i].style.backgroundColor = "";
+            //         document.querySelector("nav").querySelectorAll("li")[i].style.color = "white"
 
-                }
-                document.querySelector("nav").style.mixBlendMode = "difference"
-            }
+            //     }
+            //     document.querySelector("nav").style.mixBlendMode = "difference"
+            // }
 
             if (workbound.top <= 0) {
+                // document.getElementById("content").style.background = "black";
+                // document.getElementById("contact").style.background = "black";
+                // document.getElementById("about").style.background = "black";
+
                 work.style.background = "black";
-                work.style.borderTop = "1vh solid black";
+                // work.style.borderTop = "1vh solid black";
             } else {
-                work.style.background = "whitesmoke"    
-                work.style.borderTop = "1vh solid green"; 
+                // document.getElementById("content").style.background = "whitesmoke";
+                // document.getElementById("contact").style.background = "whitesmoke";
+                // document.getElementById("about").style.background = "whitesmoke";
+
+                work.style.background = "whitesmoke"
+                // work.style.borderTop = "1vh solid green"; 
             }
-            work.style.transition = "1s ease-in"    
+
+            // if (bounding.top <= 0) {
+            //     document.getElementById("about").style.background = "black";
+
+            //     work.style.background = "black";
+            //     // work.style.borderTop = "1vh solid black";
+            // } else {
+            //     document.getElementById("about").style.background = "whitesmoke";
+
+            //     work.style.background = "whitesmoke"    
+            //     // work.style.borderTop = "1vh solid green"; 
+            // }if (contbound.top <= 0) {
+            //     document.getElementById("contact").style.background = "black";
+
+            //     work.style.background = "black";
+            //     // work.style.borderTop = "1vh solid black";
+            // } else {
+            //     document.getElementById("contact").style.background = "whitesmoke";
+
+            //     work.style.background = "whitesmoke"    
+            //     // work.style.borderTop = "1vh solid green"; 
+            // }
+            // work.style.transition = "1s ease-in"    
 
         }
 
@@ -741,22 +831,36 @@
             } setTimeout(numRot, 1);
         };
 
-        showCoords(event);
-        function showCoords(event) {
-            var x = event.clientX;
-            var y = event.clientY;
-            document.getElementById("artblock").style.marginLeft = 3 - x / 500 + "vw";
-            document.getElementById("artblock").style.marginTop = 5 - y / 100 + "vh";
-        }
 
-        showBlock(event);
-        function showBlock(event) {
-            var x = event.clientX;
-            var y = event.clientY;
-            document.getElementById("mouse").style.marginLeft = x + "vw";
-            document.getElementById("mouse").style.marginTop = y + "vh";
-        }
+        // function showCoords(event) {
+        //     var x = event.clientX;
+        //     var y = event.clientY;
+        //     document.getElementById("artblock").style.marginLeft = 3 - x / 500 + "vw";
+        //     document.getElementById("artblock").style.marginTop = 5 - y / 100 + "vh";
+        // // }
 
+        // // showBlock(event);
+        // // function showBlock(event) {
+        // //     var x = event.clientX;
+        // //     var y = event.clientY;
+        //     document.getElementById("mouse").style.marginLeft = event.pageX + 'px';
+        //     document.getElementById("mouse").style.marginTop = event.pageY + 'px';
+
+        //     // circle.style.left = e.pageX + 'px';
+        //     // circle.style.top = e.pageY + 'px';
+        // }
+
+        handleMouseMove = (event) => {
+            const y = event.pageY;
+            const x = event.pageX;
+            const ref = document.getElementById("mouse");
+            const scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+            const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+            ref.style.left = x - scrollLeft + 'px';
+            ref.style.top = y - scrollTop + 'px';
+        };
+
+        document.addEventListener("mousemove", handleMouseMove, false);
     </script>
 </body>
 
