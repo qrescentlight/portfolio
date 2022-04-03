@@ -108,6 +108,10 @@
             transition: 0.2s ease-in-out;
         }
 
+        nav:hover {
+            mix-blend-mode: normal;
+        }
+
         nav li {
             mix-blend-mode: difference;
             margin: 0vw 1vw;
@@ -115,6 +119,10 @@
 
         nav li:hover {
             background-color: red;
+            mix-blend-mode: difference;
+        }
+
+        nav li:hover nav {
             mix-blend-mode: normal;
         }
 
@@ -579,7 +587,7 @@
                 <h1><span class="noshow">Ik ben een</span> <span class="ikben">plant<div>creatief, outside the box,
                             analytisch, moeite om te gaan doen</div></span>. </h1>
             </div>
-            <div id="picOne">
+            <div id="picOne" class="pic">
                 <h2>
                 </h2>
             </div>
@@ -591,14 +599,14 @@
                 </p>
             </div>
             <div></div>
-            <div id="pictwo"></div>
+            <div id="pictwo" class="pic"></div>
             <div class="padding" id="stage">
                 <h1>Ik ben op zoek naar een<span> stage</span> <br> om mijn <span>missie</span> te
                     <span>volbrengen</span>.
                 </h1>
             </div>
             <div></div>
-            <div id="struggle"> </div>
+            <div id="struggle" class="pic"> </div>
             <p id="watikkan">
                 Tijdens mijn stage wil ik ontdekken op welke verschillende manieren ik mijn kwaliteiten als ontwerper
                 kan toepassen om anderen te helpen met hun geestelijke gezondheid. Ik wil mijzelf blijven uitdagen als
@@ -617,22 +625,22 @@
     <section id="content">
         <ul id="work">
             <a href="#lione">
-                <li id="one">Het Bos in Huis</li>
+                <li id="one" class="pic">Het Bos in Huis</li>
             </a>
             <a href="#litwo">
-                <li id="two">Braive</li>
+                <li id="two" class="pic">Braive</li>
             </a>
             <a href="#lithree">
-                <li id="three">Persuasion</li>
+                <li id="three" class="pic">Persuasion</li>
             </a>
             <a href="#lifour">
-                <li id="four">Storytelling XR</li>
+                <li id="four" class="pic">Storytelling XR</li>
             </a>
             <a href="#lifive">
-                <li id="five">Rough Hero Journey</li>
+                <li id="five" class="pic">Rough Hero Journey</li>
             </a>
             <a href="#lisix">
-                <li id="six">UNRULY SPRING</li>
+                <li id="six" class="pic">UNRULY SPRING</li>
             </a>
         </ul>
     </section>
@@ -646,7 +654,22 @@
 
             checkTop();
             handleMouseMove(event);
+
         }
+        // picfunc();
+        // function picfunc() {
+        //     let picarray = document.getElementsByClassName("pic");
+        //     // picarray.forEach(element => {
+        //     //     element.onmouseover = function () {
+        //     //         document.getElementById("mouse").style.width = "200px";
+
+        //     //     }
+        //     // });
+        //     picarray.onmouseover = function (){
+                
+        //     }
+        // }
+
         function checkTop() {
 
 
@@ -696,6 +719,7 @@
         };
 
         document.addEventListener("mousemove", handleMouseMove, false);
+
     </script>
 </body>
 
