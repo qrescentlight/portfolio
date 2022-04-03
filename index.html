@@ -192,6 +192,8 @@
             font-size: 4vw;
             text-align: right;
             width: 50vw;
+            height: 4.5vw;
+            padding-right: 0.8vw;
         }
 
         #content {
@@ -586,6 +588,7 @@
             width: 100vw;
             height: auto;
             padding: 10vh 0vh;
+            display: none;
         }
 
         #lione h1 {
@@ -610,10 +613,7 @@
             align-items: center;
         }
 
-
-
         #lioneback {
-
             background: url(gifs/bosinhuis_2.gif);
             background-repeat: no-repeat;
             background-size: cover;
@@ -640,6 +640,13 @@
             padding-top: 4vh;
         }
 
+        /* #lionetog h1 { */
+        /* padding: 0vw 0vw 0vw 5vw; */
+        /* width:19vw;
+    margin-left:-5vw; */
+        /* text-align:right */
+        /* } */
+
         #lione button {
             all: unset;
             font-size: 1vw;
@@ -649,19 +656,24 @@
             background-color: #0A0A0A;
         }
 
-        #lione a {
+        #lione button:hover {
+            background-color: #0AB0F5;
+            color: #0A0A0A;
+        }
+
+        #lionepic a {
             position: absolute;
-            align-self: flex-end;
-            justify-self: flex-start;
+            align-self: flex-start;
+            left: 15vw;
         }
 
         #lionepic button {
             background-color: #0AB0F5;
             color: #0A0A0A;
-            z-index: 4;
+            /* z-index: 4; */
         }
 
-        #lione button:hover {
+        #lionepic button:hover {
             color: #0AB0F5;
             background-color: #0A0A0A;
         }
@@ -678,6 +690,61 @@
         /* #about{
             background-color: wheat;
         } */
+
+        #btndiv {
+            display: flex;
+            margin: auto;
+            position: relative;
+            width: inherit;
+            justify-content: center;
+
+        }
+
+        #btndiv button {
+            position: relative;
+            margin: auto 5vw;
+            padding: auto;
+            /* width: 8vw; */
+        }
+
+        .divc {
+            z-index: 7;
+        }
+
+        #condiv,
+        #form {
+            display: none;
+            position: absolute;
+            width: 20vw;
+            height: 10vw;
+            background-color: brown;
+            z-index: 7;
+        }
+        #form{
+            background-color: darkolivegreen;
+        }
+
+        #conul {
+            position: absolute;
+            left: 50vw;
+            color: #0A0A0A;
+        }
+
+        #conul {
+            font-size: 1vw;
+            width: auto;
+        }
+
+        #conul li{
+            padding: 0.2vh 0.5vw;
+
+        }
+
+        #conul li:hover {
+            background-color: #0A0A0A;
+            color: wheat;
+            width: 50vw;
+        }
     </style>
 </head>
 
@@ -763,7 +830,7 @@
 
     <section id="content">
         <ul id="work">
-            <a href="#lione" class="pic">
+            <a href="#lione" class="pic" onclick="displaybos()">
                 <li id="one" class="pic">Het Bos in Huis</li>
             </a>
             <a href="#litwo" class="pic">
@@ -785,9 +852,24 @@
     </section>
 
     <section id="contact" style="height: 100vh; display: flex; justify-content: center; align-items: center; ">
-        contactinformatie <br>
-        contactformulier <br>
-        linked in</section>
+        <ul id="conul">
+            <a href="mailto:r.p.vos@st.hanze.nl" target="_blank">
+                <li>mail me</li>
+            </a>
+            <a onclick="formfunc()">
+                <li>contactgegevens</li>
+            </a>
+            <a onclick="ttt()">
+                <li>laat een bericht achter</li>
+            </a>
+            <a href="https://www.linkedin.com/in/remco-pramudita-vos-579759233/" target="_blank">
+                <li>linkedin</li>
+            </a>
+        </ul>
+
+        <div id="form" class="divc" onclick="breakform()">dit zijn mijn contactgegevens</div>
+        <div id="condiv" class="divc" onclick="breakdiv()">dit is een contactformulier</div>
+    </section>
 
     <section id="lione">
         <div id="lionepic">
@@ -812,8 +894,10 @@
                 <div><img src="images/begonia.png" alt=""></div>
             </div>
         </div>
-        <div><a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>try it out</button></a> <a
-                href="#work"><button>see more work</button></a></div>
+        <div id="btndiv">
+            <a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>try it out</button></a><br>
+            <a href="#work"><button>see more work</button></a>
+        </div>
     </section>
 
 
@@ -821,6 +905,27 @@
     <script refer>
         window.onscroll = window.onload = window.onmousemove = function () {
             checkTop();
+        }
+
+        function ttt() {
+            document.getElementById("condiv").style.display = "block";
+        }
+        function whoc() {
+            document.getElementById("condiv").style.display = "flex";
+        }
+
+        function formfunc() {
+            document.getElementById("form").style.display = "block";
+        }
+
+
+        function breakdiv() {
+            document.getElementById("condiv").style.display = "none";
+        } function breakform() {
+            document.getElementById("form").style.display = "none";
+        }
+        function displaybos() {
+            document.getElementById("lione").style.display = "grid"
         }
 
         function checkTop() {
@@ -839,7 +944,7 @@
             var contbound = contact.getBoundingClientRect();
 
             console.log(artbound);
-            if (workbound.top <= 0) {
+            if (workbound.top <= 0 + (window.innerHeight * 0.15)) {
                 about.style.background = "#0A214C";
                 work.style.backgroundColor = "#0A214C";
             } else {
@@ -929,6 +1034,7 @@
                 }
             });
         }
+
 
     </script>
 </body>
