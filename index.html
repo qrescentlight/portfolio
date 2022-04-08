@@ -210,10 +210,11 @@
         #work {
             display: block;
             /* grid-template-columns: 50vw 50vw; */
-            margin: 10vw 0vw 0vw;
+            margin: auto 0vw;
             /* justify-content: center;
             align-items: center; */
             /* height: 100vh; */
+            /* background-color: #0AB0F5; */
         }
 
         #work li {
@@ -234,7 +235,7 @@
 
         #content {
 
-            padding-top: 15vh;
+            padding: 15vh 0vh;
             height: auto;
             min-height: 100vh;
             font-family: Proxima Nova Black, proxima-nova;
@@ -251,8 +252,8 @@
             background: wheat;
         }
 
-        #one {
-            background: url(gifs/bosinhuis_2.gif);
+        .contentList {
+            /* background: url(gifs/bosinhuis_2.gif); */
             -webkit-text-fill-color: transparent;
             background-repeat: no-repeat;
             background-size: cover;
@@ -260,10 +261,10 @@
             background-clip: text;
         }
 
-        #one:hover {
+        .contentList:hover {
             background: transparent;
-            background: url(gifs/bosinhuis_2.gif);
-            background-color: aliceblue;
+            /* background: url(gifs/bosinhuis_2.gif);
+            background-color: aliceblue; */
             -webkit-text-fill-color: #0A214C;
             background-position: 0vw -25vw;
             background-repeat: no-repeat;
@@ -663,7 +664,8 @@
         img {
             object-fit: cover;
             width: 60vw;
-            height: 30vw;
+            /* height: 30vw; */
+            height: auto;
         }
 
         #lione p {
@@ -731,11 +733,10 @@
 
         #btndiv {
             display: flex;
-            margin: auto;
+            /* margin: auto; */
             position: relative;
-            width: inherit;
+            /* width: auto; */
             justify-content: center;
-
         }
 
         #btndiv button {
@@ -790,7 +791,7 @@
 <body onmousemove="showCoords(event)">
     <nav>
         <a href="#about">
-            <div id="navlione">over mij</div>
+            <li id="navlione">over mij</li>
         </a>
         <a href="#content">
             <li id="navlitwo">mijn werk</li>
@@ -871,8 +872,13 @@
         <ul id="work">
             <a href="#lione" class="pic" onclick="displaybos()">
                 <li id="one" class="pic">Het Bos in Huis</li>
+<<<<<<< HEAD
+            </a> -->
+            <!-- <a href="#litwo" class="pic">
+=======
             </a>
             <a href="#litwo" class="pic">
+>>>>>>> parent of e67dc18 (finally working properly)
                 <li id="two" class="pic">Braive</li>
             </a>
             <a href="#lithree" class="pic">
@@ -886,7 +892,7 @@
             </a>
             <a href="#lisix" class="pic">
                 <li id="six" class="pic">UNRULY SPRING</li>
-            </a>
+            </a> -->
         </ul>
     </section>
 
@@ -912,7 +918,8 @@
 
     <section id="lione">
         <div id="lionepic">
-            <div class="pic nodeThumb"></div>
+            <!-- https://my.blocksmithxr.com/embed/57272 -->
+            <div class="pic nodeThumb" id="nodeThumb"></div>
             <!-- <a class="nodeLink"  href="https://lennart.xyz/bosinhuis/" target="_blank"><button>probeer het uit</button></a> -->
 
             <a class="nodeLink" target="_blank"><button>probeer het uit</button></a>
@@ -922,18 +929,13 @@
 
         <div class="postheader">
             <div id="lionetog">
-                <h1 id="nodeName">Het Bos is</h1>
-                <p id="nodeDesc">Kort beschrijving over het bos in huis</p>
+                <h1 id="nodeName"></h1>
+                <p id="nodeDesc"></p>
             </div>
             <div id="lionego">
-                <p id="nodeProcess">korte beschrijving proces</p>
-                <p id="nodeMypart">Korte beschrijving aandeel</p>
-                <p id="nodeReflect">Korte beschrijving reflectie: Tijdens mijn stage wil ik ontdekken op welke
-                    verschillende manieren ik
-                    mijn kwaliteiten als ontwerper
-                    kan toepassen om anderen te helpen met hun geestelijke gezondheid. Ik wil mijzelf blijven uitdagen
-                    als
-                    programmeur, maar ook ervaring opdoen in het maken van goede visuele ontwerpen.</p>
+                <p id="nodeProcess"></p>
+                <p id="nodeMypart"></p>
+                <p id="nodeReflect"></p>
                 <!-- <div><img src="images/4883881.png" alt=""></div>
                 <div><img src="images/candytuft.png" alt=""></div>
                 <div><img src="images/begonia.png" alt=""></div> -->
@@ -941,8 +943,10 @@
             </div>
         </div>
         <div id="btndiv">
-            <a class="nodeLink" target="_blank"><button>try it out</button></a><br>
-            <a href="#work"><button>see more work</button></a>
+            <button><a class="nodeLink" target="_blank">try it out</a></button><br>
+            <!-- <a href="#lione"><button onclick="vorige()">vorige</button></a> -->
+            <button><a href="#content">al mijn werk</a></button>
+            <!-- <a href="#lione"><button onclick="volgende()">volgende</button></a> -->
         </div>
     </section>
 
@@ -970,9 +974,7 @@
         } function breakform() {
             document.getElementById("form").style.display = "none";
         }
-        function displaybos() {
-            document.getElementById("lione").style.display = "grid"
-        }
+
 
         function checkTop() {
 
@@ -1015,6 +1017,262 @@
             } setTimeout(numRot, 1);
         };
 
+
+
+
+        // file = "json/items.json"
+        // fetch(file)
+        //     .then(x => x.json())
+        //     .then(y => myDisplay(y));
+
+        // function myDisplay(y) {
+        //     document.getElementById("nodeName").innerHTML = y.name;
+        //     // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
+        //     nodeThumb = document.getElementsByClassName("nodeThumb");
+
+        //     for (let i = 0; i < nodeThumb.length; i++) {
+
+        //         nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
+        //     };
+        //     document.getElementById("nodeDesc").innerHTML = y.desc;
+        //     document.getElementById("nodeProcess").innerHTML = y.process;
+        //     document.getElementById("nodeMypart").innerHTML = y.mypart;
+        //     document.getElementById("nodeReflect").innerHTML = y.reflect;
+        //     nodeLink = document.getElementsByClassName("nodeLink");
+        //     for (let i = 0; i < nodeLink.length; i++) {
+        //         nodeLink[i].setAttribute("href", y.link)
+        //     }
+
+        //     // setAttribute("href", y.link)
+        //     // document.getElementById("nodeLink").onclick = function () {
+        //     //     var link = document.getElementById("nodeLink");
+        //     //     link.setAttribute("href", y.link);
+        //     //     return false;
+        //     // }
+
+        //     nodeImages = document.getElementById("nodeImages");
+        //     for (let i = 0; i < y.images.length; i++) {
+        //         var img = document.createElement("img");
+        //         img.src = "images/" + y.images[i];
+
+        //         var div = document.getElementById("nodeImages");
+        //         div.appendChild(img);
+        //         //block.setAttribute("style", "text-align:center");
+        //     }
+
+        //     // document.getElementById("nodeImages").innerHTML = y.images;
+        // }
+
+        function loop() {
+
+            var api = "http://localhost:3000/items";
+            fetch(api)
+                .then(x => x.json())
+                .then(y => loopCont(y))
+        }
+
+        function vorige() {
+            let i = i - 1;
+            loopCont(y, i);
+        }
+        function volgende() {
+            if (i < 4) {
+                // let i = i + 1;
+                loopCont(y, i + 1);
+            }
+        }
+
+        function loopCont(y) {
+            for (let i = 0; i < y.length; i++) {
+                // console.log(y[i]);
+                var work = document.getElementById("work");
+
+                var a = document.createElement("a");
+                a.setAttribute("class", "pic");
+                a.setAttribute("href", "#lione")
+
+                // var yid = y[i].id;
+
+                var li = document.createElement("li");
+                li.setAttribute("class", "pic contentList");
+                li.setAttribute("id", y[i].id);
+                li.innerHTML = y[i].name;
+                li.addEventListener("click", function () {
+                    // alert(y[i].id)// 
+                    var apiId = "http://localhost:3000/items/" + y[i].id;
+                    // alert(yid.name);
+                    fetch(apiId)
+                        .then(xx => xx.json())
+                        .then(yy => yyfunct(yy))
+
+
+                    function yyfunct(yy) {
+                        document.getElementById("lione").style.display = "grid";
+
+
+                        document.getElementById("nodeName").innerHTML = yy.name;
+
+                        document.getElementById("nodeDesc").innerHTML = yy.desc[0];
+                        document.getElementById("nodeProcess").innerHTML = yy.desc[1];
+                        document.getElementById("nodeMypart").innerHTML = yy.desc[2];
+                        document.getElementById("nodeReflect").innerHTML = yy.desc[3];
+
+
+                        // document.get
+
+
+                        // .style.background = "url(gifs/" + yy.images[0] + ")";
+                        var styles = `
+                            #nodeThumb{
+                                background: url(gifs/`+ yy.images[0] + `);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                // background-position: 0vw -50vh;
+                                background-position: center
+                                width: 60vw;
+                                height: 30vw; 
+                            }
+                        `
+
+                        var styleSheet = document.createElement("style");
+                        styleSheet.innerText = styles;
+                        document.head.appendChild(styleSheet);
+
+                        // document.getElementById("nodeThumb").style.backgroundColor = "red";
+
+                        // nodeImages = document.getElementById("nodeImages");
+                        // console.log(yy.images.length)
+                        var nodeLink = document.getElementsByClassName("nodeLink");
+                        for (let idx = 0; idx < nodeLink.length; idx++) {
+                            nodeLink[idx].setAttribute("href", yy.link);
+                        }
+
+                        var nodeImages = document.getElementById("nodeImages");
+
+                        nodeImages.innerHTML = "";
+                        for (var index = 1; index < yy.images.length; index++) {
+                            var img = document.createElement("img");
+                            img.src = "images/" + yy.images[index];
+
+
+                            nodeImages.appendChild(img);
+                            // block.setAttribute("style", "text-align:center");
+                            // document.getElementById("nodeImages").innerHTML = yy.images[index];
+
+                        }
+
+                        // document.getElementById("nodeImages").innerHTML = yy.images;
+                    }
+
+                }, y, y[i].id)
+
+                a.appendChild(li);
+                work.appendChild(a);
+
+                var styles = `
+                    #` + y[i].id + `{
+                        background: url(gifs/`+ y[i].images[0] + `);
+                                        -webkit-text-fill-color: transparent;
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        background-position: center;
+                                        background-clip: text;
+                    }
+
+                    #` + y[i].id + `:hover {
+                        background: transparent;
+                                        background: url(gifs/`+ y[i].images[0] + `);
+                                        background-color: aliceblue;
+                                        -webkit-text-fill-color: #0A214C;
+                                        background-position: center;
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        background-clip: none;
+                    }
+                `
+
+                var styleSheet = document.createElement("style");
+                styleSheet.innerText = styles;
+                document.head.appendChild(styleSheet);
+            }
+        }
+
+
+        function displaybos(y, yid) {
+            // var apiId = "http://localhost:3000/items/" + yid;
+            alert(yid.name);
+            // fetch(apiId)
+            //     .then(x => x.json())
+            //     .then(y => alert(yid))
+
+            // document.getElementById("lione").style.display = "grid"
+
+            // document.getElementById("nodeName").innerHTML = y[i].name;
+            // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
+            // nodeThumb = document.getElementsByClassName("nodeThumb");
+
+            // for (let i = 0; i < nodeThumb.length; i++) {
+
+            //     nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
+            // };
+            // document.getElementById("nodeDesc").innerHTML = y.desc;
+            // document.getElementById("nodeProcess").innerHTML = y.process;
+            // document.getElementById("nodeMypart").innerHTML = y.mypart;
+            // document.getElementById("nodeReflect").innerHTML = y.reflect;
+            // nodeLink = document.getElementsByClassName("nodeLink");
+
+            // itemPage(y);
+
+            // var api = "http://localhost:3000/items";
+            // fetch(api)
+            //     .then(x => x.json())
+            //     // .then(y => document.getElementById("artstat").innerHTML = y.name) DIT WERKT
+            //     .then(y => itemPage(y))
+            // }
+
+            // function itemPage(y) {
+
+
+            // document.getElementById("nodeName").innerHTML = y.name;
+            // // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
+            // nodeThumb = document.getElementsByClassName("nodeThumb");
+
+            // for (let i = 0; i < nodeThumb.length; i++) {
+
+            //     nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
+            // };
+            // document.getElementById("nodeDesc").innerHTML = y.desc;
+            // document.getElementById("nodeProcess").innerHTML = y.process;
+            // document.getElementById("nodeMypart").innerHTML = y.mypart;
+            // document.getElementById("nodeReflect").innerHTML = y.reflect;
+            // nodeLink = document.getElementsByClassName("nodeLink");
+            // for (let i = 0; i < nodeLink.length; i++) {
+            //     nodeLink[i].setAttribute("href", y.link)
+            // }
+
+            // // setAttribute("href", y.link)
+            // // document.getElementById("nodeLink").onclick = function () {
+            // //     var link = document.getElementById("nodeLink");
+            // //     link.setAttribute("href", y.link);
+            // //     return false;
+            // // }
+
+            // nodeImages = document.getElementById("nodeImages");
+            // for (let i = 0; i < y.images.length; i++) {
+            //     var img = document.createElement("img");
+            //     img.src = "images/" + y.images[i];
+
+            //     var div = document.getElementById("nodeImages");
+            //     div.appendChild(img);
+            //block.setAttribute("style", "text-align:center");
+            // }
+
+            // document.getElementById("nodeImages").innerHTML = y.images;
+
+        }
+
+        loop();
+
         handleMouseMove = (event) => {
             const y = event.pageY;
             const x = event.pageX;
@@ -1035,7 +1293,7 @@
         let p = document.querySelectorAll("p");
         let h1 = document.querySelectorAll("h1, #artstat");
         let pic = document.querySelectorAll(".pic, img");
-        let button = document.querySelectorAll("button, a");
+        let button = document.querySelectorAll("button, a, #work");
 
         let olen = "2vw";
         let owid = "2vw";
@@ -1082,51 +1340,6 @@
                 }
             });
         }
-
-
-        file = "json/db"
-        fetch(file)
-            .then(x => x.json())
-            .then(y => myDisplay(y));
-
-        function myDisplay(y) {
-            document.getElementById("nodeName").innerHTML = y.name;
-            // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
-            nodeThumb = document.getElementsByClassName("nodeThumb");
-            
-            for (let i = 0; i < nodeThumb.length; i++) {
-    
-                nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
-            };
-            document.getElementById("nodeDesc").innerHTML = y.desc;
-            document.getElementById("nodeProcess").innerHTML = y.process;
-            document.getElementById("nodeMypart").innerHTML = y.mypart;
-            document.getElementById("nodeReflect").innerHTML = y.reflect;
-            nodeLink = document.getElementsByClassName("nodeLink");
-            for (let i = 0; i < nodeLink.length; i++) {
-                nodeLink[i].setAttribute("href", y.link)
-            }
-
-            // setAttribute("href", y.link)
-            // document.getElementById("nodeLink").onclick = function () {
-            //     var link = document.getElementById("nodeLink");
-            //     link.setAttribute("href", y.link);
-            //     return false;
-            // }
-
-            nodeImages = document.getElementById("nodeImages");
-            for (let i = 0; i < y.images.length; i++) {
-                var img = document.createElement("img");
-                img.src = "images/" + y.images[i];
-
-                var div = document.getElementById("nodeImages");
-                div.appendChild(img);
-                //block.setAttribute("style", "text-align:center");
-            }
-
-            // document.getElementById("nodeImages").innerHTML = y.images;
-        }
-
     </script>
 </body>
 
