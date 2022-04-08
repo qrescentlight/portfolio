@@ -603,22 +603,8 @@
             top: -100vh;
             left: -100vw;
             transition: height 0.3s ease-out, width 0.3s ease-out, border-radius 0.3s ease-out;
-            /* transition: height 0.5s ease-out; */
             border-radius: 100%;
-            /* background: url(images/profielpic.png);
-                background-size: cover; */
         }
-
-        /* #mouseview {
-            position: fixed;
-            background-color: rgba(32, 234, 153, 0.126);
-            width: 100vw;
-            height: 100vh;
-            top: 0px;
-            left: 0px;
-            z-index: 10;
-            mix-blend-mode: difference;
-        } */
 
         #lione {
             background-color: whitesmoke;
@@ -653,7 +639,6 @@
         }
 
         .nodeThumb {
-            /* background: url(gifs/bosinhuis_2.gif); */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 0vw -50vh;
@@ -664,7 +649,6 @@
         img {
             object-fit: cover;
             width: 60vw;
-            /* height: 30vw; */
             height: auto;
         }
 
@@ -679,13 +663,6 @@
             grid-template-columns: 2fr 3fr;
             padding-top: 4vh;
         }
-
-        /* #lionetog h1 { */
-        /* padding: 0vw 0vw 0vw 5vw; */
-        /* width:19vw;
-    margin-left:-5vw; */
-        /* text-align:right */
-        /* } */
 
         #lione button {
             all: unset;
@@ -710,7 +687,6 @@
         #lionepic button {
             background-color: #0AB0F5;
             color: #0A0A0A;
-            /* z-index: 4; */
         }
 
         #lionepic button:hover {
@@ -727,15 +703,9 @@
             width: 30vw;
         }
 
-        /* #about{
-            background-color: wheat;
-        } */
-
         #btndiv {
             display: flex;
-            /* margin: auto; */
             position: relative;
-            /* width: auto; */
             justify-content: center;
         }
 
@@ -743,7 +713,6 @@
             position: relative;
             margin: auto 5vw;
             padding: auto;
-            /* width: 8vw; */
         }
 
         .divc {
@@ -805,7 +774,6 @@
         <div id="mouse"></div>
     </div>
 
-    <!-- <div id="where"> </div> -->
 
     <div id="name"><a href="#">
             <h1>Remco </h1>
@@ -870,29 +838,7 @@
 
     <section id="content">
         <ul id="work">
-            <a href="#lione" class="pic" onclick="displaybos()">
-                <li id="one" class="pic">Het Bos in Huis</li>
-<<<<<<< HEAD
-            </a> -->
-            <!-- <a href="#litwo" class="pic">
-=======
-            </a>
-            <a href="#litwo" class="pic">
->>>>>>> parent of e67dc18 (finally working properly)
-                <li id="two" class="pic">Braive</li>
-            </a>
-            <a href="#lithree" class="pic">
-                <li id="three" class="pic">Persuasion</li>
-            </a>
-            <a href="#lifour" class="pic">
-                <li id="four" class="pic">Storytelling XR</li>
-            </a>
-            <a href="#lifive" class="pic">
-                <li id="five" class="pic">Rough Hero Journey</li>
-            </a>
-            <a href="#lisix" class="pic">
-                <li id="six" class="pic">UNRULY SPRING</li>
-            </a> -->
+           
         </ul>
     </section>
 
@@ -936,9 +882,6 @@
                 <p id="nodeProcess"></p>
                 <p id="nodeMypart"></p>
                 <p id="nodeReflect"></p>
-                <!-- <div><img src="images/4883881.png" alt=""></div>
-                <div><img src="images/candytuft.png" alt=""></div>
-                <div><img src="images/begonia.png" alt=""></div> -->
                 <div id="nodeImages"></div>
             </div>
         </div>
@@ -949,8 +892,6 @@
             <!-- <a href="#lione"><button onclick="volgende()">volgende</button></a> -->
         </div>
     </section>
-
-
 
     <script refer>
         window.onscroll = window.onload = window.onmousemove = function () {
@@ -977,7 +918,6 @@
 
 
         function checkTop() {
-
 
             var about = document.getElementById("about");
             var bounding = about.getBoundingClientRect();
@@ -1017,69 +957,12 @@
             } setTimeout(numRot, 1);
         };
 
-
-
-
-        // file = "json/items.json"
-        // fetch(file)
-        //     .then(x => x.json())
-        //     .then(y => myDisplay(y));
-
-        // function myDisplay(y) {
-        //     document.getElementById("nodeName").innerHTML = y.name;
-        //     // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
-        //     nodeThumb = document.getElementsByClassName("nodeThumb");
-
-        //     for (let i = 0; i < nodeThumb.length; i++) {
-
-        //         nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
-        //     };
-        //     document.getElementById("nodeDesc").innerHTML = y.desc;
-        //     document.getElementById("nodeProcess").innerHTML = y.process;
-        //     document.getElementById("nodeMypart").innerHTML = y.mypart;
-        //     document.getElementById("nodeReflect").innerHTML = y.reflect;
-        //     nodeLink = document.getElementsByClassName("nodeLink");
-        //     for (let i = 0; i < nodeLink.length; i++) {
-        //         nodeLink[i].setAttribute("href", y.link)
-        //     }
-
-        //     // setAttribute("href", y.link)
-        //     // document.getElementById("nodeLink").onclick = function () {
-        //     //     var link = document.getElementById("nodeLink");
-        //     //     link.setAttribute("href", y.link);
-        //     //     return false;
-        //     // }
-
-        //     nodeImages = document.getElementById("nodeImages");
-        //     for (let i = 0; i < y.images.length; i++) {
-        //         var img = document.createElement("img");
-        //         img.src = "images/" + y.images[i];
-
-        //         var div = document.getElementById("nodeImages");
-        //         div.appendChild(img);
-        //         //block.setAttribute("style", "text-align:center");
-        //     }
-
-        //     // document.getElementById("nodeImages").innerHTML = y.images;
-        // }
-
         function loop() {
-
-            var api = "http://localhost:3000/items";
+            // var api = "http://localhost:3000/items/";
+            var api = "https://my-json-server.typicode.com/qrescentlight/users-api-server/items/";
             fetch(api)
                 .then(x => x.json())
                 .then(y => loopCont(y))
-        }
-
-        function vorige() {
-            let i = i - 1;
-            loopCont(y, i);
-        }
-        function volgende() {
-            if (i < 4) {
-                // let i = i + 1;
-                loopCont(y, i + 1);
-            }
         }
 
         function loopCont(y) {
@@ -1099,16 +982,16 @@
                 li.innerHTML = y[i].name;
                 li.addEventListener("click", function () {
                     // alert(y[i].id)// 
-                    var apiId = "http://localhost:3000/items/" + y[i].id;
-                    // alert(yid.name);
+                    // var apiId = "http://localhost:3000/items/" + y[i].id;
+                    var apiId = "https://my-json-server.typicode.com/qrescentlight/users-api-server/items/" + y[i].id;
                     fetch(apiId)
                         .then(xx => xx.json())
                         .then(yy => yyfunct(yy))
 
 
                     function yyfunct(yy) {
+                        console.log(yy);
                         document.getElementById("lione").style.display = "grid";
-
 
                         document.getElementById("nodeName").innerHTML = yy.name;
 
@@ -1117,11 +1000,6 @@
                         document.getElementById("nodeMypart").innerHTML = yy.desc[2];
                         document.getElementById("nodeReflect").innerHTML = yy.desc[3];
 
-
-                        // document.get
-
-
-                        // .style.background = "url(gifs/" + yy.images[0] + ")";
                         var styles = `
                             #nodeThumb{
                                 background: url(gifs/`+ yy.images[0] + `);
@@ -1138,10 +1016,6 @@
                         styleSheet.innerText = styles;
                         document.head.appendChild(styleSheet);
 
-                        // document.getElementById("nodeThumb").style.backgroundColor = "red";
-
-                        // nodeImages = document.getElementById("nodeImages");
-                        // console.log(yy.images.length)
                         var nodeLink = document.getElementsByClassName("nodeLink");
                         for (let idx = 0; idx < nodeLink.length; idx++) {
                             nodeLink[idx].setAttribute("href", yy.link);
@@ -1150,18 +1024,13 @@
                         var nodeImages = document.getElementById("nodeImages");
 
                         nodeImages.innerHTML = "";
-                        for (var index = 1; index < yy.images.length; index++) {
+                        for (let index = 1; index < yy.images.length; index++) {
                             var img = document.createElement("img");
                             img.src = "images/" + yy.images[index];
 
 
                             nodeImages.appendChild(img);
-                            // block.setAttribute("style", "text-align:center");
-                            // document.getElementById("nodeImages").innerHTML = yy.images[index];
-
                         }
-
-                        // document.getElementById("nodeImages").innerHTML = yy.images;
                     }
 
                 }, y, y[i].id)
@@ -1197,80 +1066,6 @@
             }
         }
 
-
-        function displaybos(y, yid) {
-            // var apiId = "http://localhost:3000/items/" + yid;
-            alert(yid.name);
-            // fetch(apiId)
-            //     .then(x => x.json())
-            //     .then(y => alert(yid))
-
-            // document.getElementById("lione").style.display = "grid"
-
-            // document.getElementById("nodeName").innerHTML = y[i].name;
-            // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
-            // nodeThumb = document.getElementsByClassName("nodeThumb");
-
-            // for (let i = 0; i < nodeThumb.length; i++) {
-
-            //     nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
-            // };
-            // document.getElementById("nodeDesc").innerHTML = y.desc;
-            // document.getElementById("nodeProcess").innerHTML = y.process;
-            // document.getElementById("nodeMypart").innerHTML = y.mypart;
-            // document.getElementById("nodeReflect").innerHTML = y.reflect;
-            // nodeLink = document.getElementsByClassName("nodeLink");
-
-            // itemPage(y);
-
-            // var api = "http://localhost:3000/items";
-            // fetch(api)
-            //     .then(x => x.json())
-            //     // .then(y => document.getElementById("artstat").innerHTML = y.name) DIT WERKT
-            //     .then(y => itemPage(y))
-            // }
-
-            // function itemPage(y) {
-
-
-            // document.getElementById("nodeName").innerHTML = y.name;
-            // // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
-            // nodeThumb = document.getElementsByClassName("nodeThumb");
-
-            // for (let i = 0; i < nodeThumb.length; i++) {
-
-            //     nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
-            // };
-            // document.getElementById("nodeDesc").innerHTML = y.desc;
-            // document.getElementById("nodeProcess").innerHTML = y.process;
-            // document.getElementById("nodeMypart").innerHTML = y.mypart;
-            // document.getElementById("nodeReflect").innerHTML = y.reflect;
-            // nodeLink = document.getElementsByClassName("nodeLink");
-            // for (let i = 0; i < nodeLink.length; i++) {
-            //     nodeLink[i].setAttribute("href", y.link)
-            // }
-
-            // // setAttribute("href", y.link)
-            // // document.getElementById("nodeLink").onclick = function () {
-            // //     var link = document.getElementById("nodeLink");
-            // //     link.setAttribute("href", y.link);
-            // //     return false;
-            // // }
-
-            // nodeImages = document.getElementById("nodeImages");
-            // for (let i = 0; i < y.images.length; i++) {
-            //     var img = document.createElement("img");
-            //     img.src = "images/" + y.images[i];
-
-            //     var div = document.getElementById("nodeImages");
-            //     div.appendChild(img);
-            //block.setAttribute("style", "text-align:center");
-            // }
-
-            // document.getElementById("nodeImages").innerHTML = y.images;
-
-        }
-
         loop();
 
         handleMouseMove = (event) => {
@@ -1304,8 +1099,6 @@
 
         let nlen = olen;
         let nwid = owid;
-        // let obor = "0px";
-        // let nbor = nbor;
         let nbdr = obdr;
         let nmbm = ombm;
         let nopa = oopa;
@@ -1316,7 +1109,6 @@
         document.getElementById("mouse").style.borderRadius = nbdr;
 
         selector(pic, "6vw", "6vw", "100%", "normal", "0.3", "orangered");
-        // selector(p, "10vw", "10vw", "100%", ombm, oopa, obkc);
         selector(h1, "4vw", "10vw", obdr, ombm, oopa, obkc);
         selector(button, "0.5vw", "0.5vw", "100%", ombm, oopa, obkc);
 
@@ -1340,6 +1132,7 @@
                 }
             });
         }
+
     </script>
 </body>
 
