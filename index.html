@@ -105,22 +105,40 @@
             z-index: 9;
             font-size: 1vw;
             color: white;
-            /* mix-blend-mode: exclusion; */
+            mix-blend-mode: exclusion;  
             /* mix-blend-mode: normal; */
-            pointer-events: none;
-            background-color: #00000000;
+            /* pointer-events: none; */
+            /* background-color: black; */
             /* transition: 0.2s ease-in-out; */
         }
 
-        /* nav a:hover {
+        /* nav a:hover li{
             background-color: orangered;
             mix-blend-mode: normal;
         } */
 
-        nav a {
+        nav li, nav a {
             /* mix-blend-mode: exclusion; */
+            /* mix-blend-mode: normal; */
             pointer-events: auto;
         }
+/* 
+        nav:hover {
+            mix-blend-mode: exclusion;
+        } */
+
+        nav:hover > a li:hover {
+            background-color: orangered;
+            /* mix-blend-mode: normal; */
+        }
+
+       
+
+        /* nav li:hover li{
+            mix-blend-mode: difference;
+         
+            background-color: orangered;
+        } */
 
         /* nav li:hover nav {
             pointer-events: none;
@@ -140,17 +158,17 @@
 
         #navlione:hover,
         #navlitwo:hover,
-        #navlithree:hover{
+        #navlithree:hover {
             background-color: orangered;
-            /* mix-blend-mode: normal; */
-        }
+            mix-blend-mode: difference;
+        } 
 
 
         /* nav:hover {
             pointer-events: default;
             mix-blend-mode: normal;
-        }
-        nav li{
+        } */
+        /* nav li{
             pointer-events: default;
         }
 
@@ -162,9 +180,9 @@
         nav li:hover {
             background-color: orangered;
             mix-blend-mode: difference;
-        }
+        } */
 
-        nav li:hover nav {
+        /* nav li:hover nav {
             mix-blend-mode: normal;
         }
 
@@ -608,7 +626,7 @@
             width: 100vw;
             height: auto;
             padding: 10vh 0vh;
-            display: none;
+            /* display: none; */
         }
 
         #lione h1 {
@@ -633,8 +651,8 @@
             align-items: center;
         }
 
-        #lioneback {
-            background: url(gifs/bosinhuis_2.gif);
+        .nodeThumb {
+            /* background: url(gifs/bosinhuis_2.gif); */
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 0vw -50vh;
@@ -772,7 +790,7 @@
 <body onmousemove="showCoords(event)">
     <nav>
         <a href="#about">
-            <li id="navlione">over mij</li>
+            <div id="navlione">over mij</div>
         </a>
         <a href="#content">
             <li id="navlitwo">mijn werk</li>
@@ -894,29 +912,36 @@
 
     <section id="lione">
         <div id="lionepic">
-            <div class="pic" id="lioneback"></div>
-            <a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>probeer het uit</button></a>
+            <div class="pic nodeThumb"></div>
+            <!-- <a class="nodeLink"  href="https://lennart.xyz/bosinhuis/" target="_blank"><button>probeer het uit</button></a> -->
+
+            <a class="nodeLink" target="_blank"><button>probeer het uit</button></a>
+
         </div>
+
+
         <div class="postheader">
             <div id="lionetog">
-                <h1>Het Bos in Huis</h1>
-                <p>Kort beschrijving over het bos in huis</p>
+                <h1 id="nodeName">Het Bos is</h1>
+                <p id="nodeDesc">Kort beschrijving over het bos in huis</p>
             </div>
             <div id="lionego">
-                <p>korte beschrijving proces</p>
-                <p>Korte beschrijving aandeel</p>
-                <p>Korte beschrijving reflectie: Tijdens mijn stage wil ik ontdekken op welke verschillende manieren ik
+                <p id="nodeProcess">korte beschrijving proces</p>
+                <p id="nodeMypart">Korte beschrijving aandeel</p>
+                <p id="nodeReflect">Korte beschrijving reflectie: Tijdens mijn stage wil ik ontdekken op welke
+                    verschillende manieren ik
                     mijn kwaliteiten als ontwerper
                     kan toepassen om anderen te helpen met hun geestelijke gezondheid. Ik wil mijzelf blijven uitdagen
                     als
                     programmeur, maar ook ervaring opdoen in het maken van goede visuele ontwerpen.</p>
-                <div><img src="images/4883881.png" alt=""></div>
+                <!-- <div><img src="images/4883881.png" alt=""></div>
                 <div><img src="images/candytuft.png" alt=""></div>
-                <div><img src="images/begonia.png" alt=""></div>
+                <div><img src="images/begonia.png" alt=""></div> -->
+                <div id="nodeImages"></div>
             </div>
         </div>
         <div id="btndiv">
-            <a href="https://lennart.xyz/bosinhuis/" target="_blank"><button>try it out</button></a><br>
+            <a class="nodeLink" target="_blank"><button>try it out</button></a><br>
             <a href="#work"><button>see more work</button></a>
         </div>
     </section>
@@ -994,7 +1019,9 @@
             const y = event.pageY;
             const x = event.pageX;
             const ref = document.getElementById("mouse");
+            
             const scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
+            
             const scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
             ref.style.left = x - scrollLeft + 'px';
             ref.style.top = y - scrollTop + 'px';
@@ -1056,6 +1083,49 @@
             });
         }
 
+
+        file = "json/db"
+        fetch(file)
+            .then(x => x.json())
+            .then(y => myDisplay(y));
+
+        function myDisplay(y) {
+            document.getElementById("nodeName").innerHTML = y.name;
+            // document.getElementById("nodeThumb").style.background = "url(gifs/bosinhuis_2.gif)"
+            nodeThumb = document.getElementsByClassName("nodeThumb");
+            
+            for (let i = 0; i < nodeThumb.length; i++) {
+    
+                nodeThumb[i].style.background = "url(gifs/" + y.thumb + ")";
+            };
+            document.getElementById("nodeDesc").innerHTML = y.desc;
+            document.getElementById("nodeProcess").innerHTML = y.process;
+            document.getElementById("nodeMypart").innerHTML = y.mypart;
+            document.getElementById("nodeReflect").innerHTML = y.reflect;
+            nodeLink = document.getElementsByClassName("nodeLink");
+            for (let i = 0; i < nodeLink.length; i++) {
+                nodeLink[i].setAttribute("href", y.link)
+            }
+
+            // setAttribute("href", y.link)
+            // document.getElementById("nodeLink").onclick = function () {
+            //     var link = document.getElementById("nodeLink");
+            //     link.setAttribute("href", y.link);
+            //     return false;
+            // }
+
+            nodeImages = document.getElementById("nodeImages");
+            for (let i = 0; i < y.images.length; i++) {
+                var img = document.createElement("img");
+                img.src = "images/" + y.images[i];
+
+                var div = document.getElementById("nodeImages");
+                div.appendChild(img);
+                //block.setAttribute("style", "text-align:center");
+            }
+
+            // document.getElementById("nodeImages").innerHTML = y.images;
+        }
 
     </script>
 </body>
