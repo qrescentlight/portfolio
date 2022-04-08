@@ -1,4 +1,3 @@
-<style>
         body {
             font-family: proxima-nova, sans-serif;
             font-weight: 900;
@@ -28,7 +27,6 @@
             width: 100vw;
             height: 100vh;
             display: flex;
-            /* background: whitesmoke; */
         }
 
         #landing {
@@ -96,48 +94,15 @@
             font-size: 1vw;
             color: white;
             mix-blend-mode: exclusion;  
-            /* mix-blend-mode: normal; */
-            /* pointer-events: none; */
-            /* background-color: black; */
-            /* transition: 0.2s ease-in-out; */
         }
-
-        /* nav a:hover li{
-            background-color: orangered;
-            mix-blend-mode: normal;
-        } */
 
         nav li, nav a {
-            /* mix-blend-mode: exclusion; */
-            /* mix-blend-mode: normal; */
             pointer-events: auto;
         }
-/* 
-        nav:hover {
-            mix-blend-mode: exclusion;
-        } */
 
         nav:hover > a li:hover {
             background-color: orangered;
-            /* mix-blend-mode: normal; */
         }
-
-       
-
-        /* nav li:hover li{
-            mix-blend-mode: difference;
-         
-            background-color: orangered;
-        } */
-
-        /* nav li:hover nav {
-            pointer-events: none;
-        } */
-
-        /* nav:hover li, nav a:hover li, nav a li:hover, nav:hover, nav li {
-            mix-blend-mode: normal;
-
-        } */
 
         #navlione,
         #navlitwo,
@@ -153,36 +118,7 @@
             mix-blend-mode: difference;
         } 
 
-
-        /* nav:hover {
-            pointer-events: default;
-            mix-blend-mode: normal;
-        } */
-        /* nav li{
-            pointer-events: default;
-        }
-
-        nav li {
-            mix-blend-mode: difference;
-            margin: 0vw 1vw;
-        }
-
-        nav li:hover {
-            background-color: orangered;
-            mix-blend-mode: difference;
-        } */
-
-        /* nav li:hover nav {
-            mix-blend-mode: normal;
-        }
-
-        nav li nav {
-            pointer-events: none;
-
-        } */
-
         #about {
-            /* background: wheat; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -199,22 +135,11 @@
 
         #work {
             display: block;
-            /* grid-template-columns: 50vw 50vw; */
             margin: auto 0vw;
-            /* justify-content: center;
-            align-items: center; */
-            /* height: 100vh; */
-            /* background-color: #0AB0F5; */
         }
 
         #work li {
             display: block;
-            /* justify-content: center;
-            align-items: center;
-            justify-self: center;
-            align-self: center; */
-            /* height: 24vh;
-            width: 35vw; */
             text-align: center;
             font-size: 4vw;
             text-align: right;
@@ -243,7 +168,6 @@
         }
 
         .contentList {
-            /* background: url(gifs/bosinhuis_2.gif); */
             -webkit-text-fill-color: transparent;
             background-repeat: no-repeat;
             background-size: cover;
@@ -253,115 +177,13 @@
 
         .contentList:hover {
             background: transparent;
-            /* background: url(gifs/bosinhuis_2.gif);
-            background-color: aliceblue; */
             -webkit-text-fill-color: #0A214C;
             background-position: 0vw -25vw;
             background-repeat: no-repeat;
             background-size: cover;
             background-clip: none;
         }
-
-        #two {
-            background: url(images/scrnbraive.jpg);
-            -webkit-text-fill-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: text;
-        }
-
-        #two:hover {
-            background: transparent;
-            background: url(images/scrnbraive.jpg);
-            background-color: aliceblue;
-            -webkit-text-fill-color: #0A214C;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: none;
-        }
-
-        #three {
-            background: url(images/scrnper.jpg);
-            -webkit-text-fill-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: text;
-        }
-
-        #three:hover {
-            background: transparent;
-            background: url(images/scrnper.jpg);
-            background-color: aliceblue;
-            -webkit-text-fill-color: #0A214C;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: none;
-        }
-
-        #four {
-            background: url(images/scrnstory.png);
-            -webkit-text-fill-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: text;
-        }
-
-        #four:hover {
-            background: transparent;
-            background: url(images/scrnstory.png);
-            background-color: aliceblue;
-            -webkit-text-fill-color: #0A214C;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: none;
-        }
-
-        #five {
-            background: url(gifs/hero.gif);
-            -webkit-text-fill-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: text;
-        }
-
-        #five:hover {
-            background: transparent;
-            background: url(gifs/hero.gif);
-            background-color: aliceblue;
-            -webkit-text-fill-color: #0A214C;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: none;
-        }
-
-        #six {
-            background: url(gifs/remcosspel_2_2.gif);
-            -webkit-text-fill-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: text;
-        }
-
-        #six:hover {
-            background: transparent;
-            background: url(gifs/remcosspel_2_2.gif);
-            background-color: aliceblue;
-            -webkit-text-fill-color: #0A214C;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-clip: none;
-        }
-
+        
         @keyframes artstat {
             50% {
                 margin: 0.1%;
@@ -603,7 +425,6 @@
             width: 100vw;
             height: auto;
             padding: 10vh 0vh;
-            /* display: none; */
         }
 
         #lione h1 {
@@ -745,4 +566,3 @@
             width: 50vw;
         }   
         
-    </style>
